@@ -1,15 +1,4 @@
-/**
-* Template Name: Append
-* Template URL: https://bootstrapmade.com/append-bootstrap-website-template/
-* Updated: Aug 07 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
-/*--------------------------------------------------------------
-# Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
---------------------------------------------------------------*/
 /* Fonts */
 :root {
   --default-font: "Open Sans",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -781,7 +770,7 @@ section,
   height: 100%;
   object-fit: cover;
   z-index: 1;
-}
+} 
 
 .hero:before {
   content: "";
@@ -1335,11 +1324,13 @@ section,
 .pricing .pricing-item {
   background-color: var(--surface-color);
   box-shadow: 0 3px 20px -2px rgba(0, 0, 0, 0.1);
-  padding: 60px 40px;
+  padding: 20px 20px;
   height: 100%;
   position: relative;
   border-radius: 15px;
 }
+
+
 
 .pricing h3 {
   font-weight: 600;
