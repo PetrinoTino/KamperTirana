@@ -93,14 +93,14 @@
     .hero-title {
         font-size: 3.2rem;
         font-weight: 700;
-        color: #533f2d; /* Ngjyrë e butë kafe */
-        font-family: 'Poppins', sans-serif;
+        color: #352b23; /* Ngjyrë e butë kafe */
+        font-family:Georgia, 'Times New Roman', Times, serif
     }
 
     .hero-text {
         font-size: 1.7rem;
         font-weight: 500;
-        color: #4f4b4b; /* E zezë e lehtë për sy */
+        color: #774949; /* E zezë e lehtë për sy */
         font-family: 'Poppins', sans-serif;
         margin-top: 10px;
         line-height: 1.4;
@@ -148,7 +148,7 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6 hero-content">
-            <h2 class="hero-title" data-aos="fade-up" data-aos-delay="100"> Tirana Campers Albania </h2>
+            <h2 class="hero-title" data-aos="fade-up" data-aos-delay="100" > Tirana Campers Albania </h2>
             
             <p class="hero-text" data-aos="fade-up" data-aos-delay="300">
                 <strong>3 Campers:</strong> <br> 
@@ -157,25 +157,44 @@
             
         
         </div>
-            <div class="col-lg-6 hero-image" data-aos="fade-left" data-aos-delay="600" style="text-align: center;">
-                <img src="/volkswagen.png" alt="Kamper Tirana Volkswagen" class="img-fluid animated-image">
-                
-                <div class="icon-details">
-                    <div class="icon-item">
-                        <img src="/icons8-turbo-50.png" width="40px" alt="" > <span style="font-family:monospace; color: black;">2500cc</span>
-                    </div>
-                    <div class="icon-item">
-                        <img src="/icons8-gas-station-24.png" width="40px" alt=""> <span style="font-family:monospace;  color: black;">8 - 9 / 100km</span>
-                    </div>
-                    <div class="icon-item">
-                        <img src="/icons8-clutch-pedal-48.png" width="40px" alt=""> <span style="font-family:monospace;  color: black;">Manual</span>
-                    </div>
-                    <div class="icon-item">
-                        <img src="/icons8-speed-meter-50.png" width="40px" alt=""> <span style="font-family:monospace;  color: black;">ON</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div class="col-lg-6 hero-image" id="image-1" data-aos="fade-left" data-aos-delay="600" style="text-align: center;">
+          <img id="car-image-1" src="/volkswagen.png" alt="Kamper Tirana Volkswagen" class="img-fluid animated-image">
+          
+          <div class="icon-details">
+              <div class="icon-item">
+                  <img src="/icons8-turbo-50.png" width="40px" alt=""> <span id="engine-1" style="color: black;">2500cc</span>
+              </div>
+              <div class="icon-item">
+                  <img src="/icons8-gas-station-24.png" width="40px" alt=""> <span id="fuel-consumption-1" style="color: black;">8-9/100km</span>
+              </div>
+              <div class="icon-item">
+                  <img src="/icons8-clutch-pedal-48.png" width="40px" alt=""> <span id="transmission-1" style="color: black;">Manual</span>
+              </div>
+              <div class="icon-item">
+                  <img src="/icons8-speed-meter-50.png" width="40px" alt=""> <span id="status-1" style="color: black;">ON</span>
+              </div>
+          </div>
+      </div>
+      
+      <div class="col-lg-6 hero-image" id="image-2" data-aos="fade-left" data-aos-delay="600" style="text-align: center; display: none;">
+          <img id="car-image-2" src="/ducat.png" alt="Kamper Tirana Audi" class="img-fluid animated-image">
+          
+          <div class="icon-details">
+              <div class="icon-item">
+                  <img src="/icons8-turbo-50.png" width="40px" alt=""> <span id="engine-2" style="color: black;">1900cc</span>
+              </div>
+              <div class="icon-item">
+                  <img src="/icons8-gas-station-24.png" width="40px" alt=""> <span id="fuel-consumption-2" style="color: black;">8-9/100km</span>
+              </div>
+              <div class="icon-item">
+                  <img src="/icons8-clutch-pedal-48.png" width="40px" alt=""> <span id="transmission-2" style="color: black;">Manual</span>
+              </div>
+              <div class="icon-item">
+                  <img src="/icons8-speed-meter-50.png" width="40px" alt=""> <span id="status-2" style="color: black;">ON</span>
+              </div>
+          </div>
+      </div>
+      
     </div>
     
     
@@ -1407,7 +1426,7 @@
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Kamper Tirana</span>
+            <span class="sitename">Tirana Campers Albania</span>
           </a>
           <p style="font-size: 20px; font-weight: bolder;color: orange;">Start your adventure today. <br> 
             Your camper rental awaits!
@@ -1503,6 +1522,25 @@
 
   <!-- Preloader -->
   <div id="preloader"></div>
+
+  <script>
+    let currentImage = 1; // Përcakton që të fillojë nga div-i 1
+
+    function switchImages() {
+        if (currentImage === 1) {
+            document.getElementById("image-1").style.display = "none";  // Fsheh div-in e parë
+            document.getElementById("image-2").style.display = "block"; // Shfaq div-in e dytë
+            currentImage = 2; // Ndërron në div-in e dytë
+        } else {
+            document.getElementById("image-2").style.display = "none";  // Fsheh div-in e dytë
+            document.getElementById("image-1").style.display = "block"; // Shfaq div-in e parë
+            currentImage = 1; // Ndërron në div-in e parë
+        }
+    }
+
+    // Cakto intervalin për të ndërruar div-in çdo 5 sekonda
+    setInterval(switchImages, 5000);
+</script>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
