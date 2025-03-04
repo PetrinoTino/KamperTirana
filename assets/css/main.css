@@ -8,7 +8,7 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+  --background-color: #ffffffe0; /* Background color for the entire website, including individual sections */
   --default-color: #212529; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #32353a; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #e84545; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
@@ -205,8 +205,8 @@ h6 {
 .index-page .header {
   --background-color: rgba(255, 255, 255, 0);
   --heading-color: #ffffff;
-  --nav-color: rgba(255, 255, 255, 0.5);
-  --nav-hover-color: #ffffff;
+  --nav-color: rgba(0, 0, 0, 0.5);
+  --nav-hover-color: #ff0000;
 }
 
 /* Index Page Header on Scroll
