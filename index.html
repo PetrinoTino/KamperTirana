@@ -80,6 +80,40 @@
         gap: 8px; /* Hapësira mes ikonës dhe tekstit */
         font-size: 1.2rem;
     }
+
+
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    .hero-content {
+        text-align: left;
+        padding: 20px;
+    }
+
+    .hero-title {
+        font-size: 3.2rem;
+        font-weight: 700;
+        color: #533f2d; /* Ngjyrë e butë kafe */
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .hero-text {
+        font-size: 1.7rem;
+        font-weight: 500;
+        color: #4f4b4b; /* E zezë e lehtë për sy */
+        font-family: 'Poppins', sans-serif;
+        margin-top: 10px;
+        line-height: 1.4;
+    }
+
+    .hero-subtext {
+        font-size: 1.3rem;
+        font-weight: 400;
+        color: #5b5858; /* Gri e butë për tekstin dytësor */
+        font-family: 'Poppins', sans-serif;
+        margin-top: 15px;
+        line-height: 1.5;
+    }
   </style>
 </head>
 
@@ -120,28 +154,33 @@
     <section id="hero" class="hero-section dark-bg" style="width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center; background-color: #a29696d0; color: #fff;">
       <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-6 hero-content">
-                <h2 class="hero-title" data-aos="fade-up" data-aos-delay="100" style="font-size: 3rem; font-weight: bold; color: rgb(83, 64, 29);">Kamper Tirana</h2>
-                <!-- <p class="hero-text" data-aos="fade-up" data-aos-delay="200" style="font-size: 1.2rem;">Absolute adventure maker 🧭</p> -->
-                <p class="hero-text" data-aos="fade-up" data-aos-delay="300" style="font-size: 1.5rem; font-family:monospace;" >3 campers: <br> Tirana, Shkodra and Saranda 🚐</p>
-                <!-- <p class="hero-text" data-aos="fade-up" data-aos-delay="400" style="font-size: 1.5rem;">Best experience, affordable prices ⭐️</p>
-                <p class="hero-text" data-aos="fade-up" data-aos-delay="500" style="font-size: 1.5rem;">Explore Albania and beyond 🌍</p> -->
-            </div>
+          <div class="col-lg-6 hero-content">
+            <h2 class="hero-title" data-aos="fade-up" data-aos-delay="100">Kamper Tirana</h2>
+            
+            <p class="hero-text" data-aos="fade-up" data-aos-delay="300">
+                <strong>3 Campers:</strong> <br> 
+                Tirana, Shkodra & Saranda 
+            </p>
+            
+            <p class="hero-subtext" data-aos="fade-up" data-aos-delay="400">
+                Discover breathtaking landscapes, cozy campers & unforgettable adventures. 
+            </p>
+        </div>
             <div class="col-lg-6 hero-image" data-aos="fade-left" data-aos-delay="600" style="text-align: center;">
                 <img src="/volkswagen.png" alt="Kamper Tirana Volkswagen" class="img-fluid animated-image">
                 
                 <div class="icon-details">
                     <div class="icon-item">
-                        <img src="/icons8-turbo-50.png" width="40px" alt=""> <span>2500cc</span>
+                        <img src="/icons8-turbo-50.png" width="40px" alt=""> <span style="font-family:monospace;">2500cc</span>
                     </div>
                     <div class="icon-item">
-                        <img src="/icons8-gas-station-24.png" width="40px" alt=""> <span>8 - 9 / 100km</span>
+                        <img src="/icons8-gas-station-24.png" width="40px" alt=""> <span style="font-family:monospace;">8 - 9 / 100km</span>
                     </div>
                     <div class="icon-item">
-                        <img src="/icons8-clutch-pedal-48.png" width="40px" alt=""> <span>Manual</span>
+                        <img src="/icons8-clutch-pedal-48.png" width="40px" alt=""> <span style="font-family:monospace;">Manual</span>
                     </div>
                     <div class="icon-item">
-                        <img src="/icons8-speed-meter-50.png" width="40px" alt=""> <span>ON</span>
+                        <img src="/icons8-speed-meter-50.png" width="40px" alt=""> <span style="font-family:monospace;">ON</span>
                     </div>
                 </div>
             </div>
