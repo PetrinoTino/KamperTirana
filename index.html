@@ -80,7 +80,31 @@
         gap: 8px; /* Hapësira mes ikonës dhe tekstit */
         font-size: 1.2rem;
     }
+  /* Përcaktimi i animacionit për shfaqjen e elementeve */
+  
+  
+  .slide-in {
+    animation: slideIn 1s ease-in-out forwards;
+  }
 
+  /* Krijimi i animacionit të 'slide' */
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  /* Fsheh div-in në fillim */
+ 
 
 
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
@@ -174,9 +198,9 @@
                   <img src="/icons8-speed-meter-50.png" width="40px" alt=""> <span id="status-1" style="color: black;">ON</span>
               </div>
           </div>
-      </div>
-      
-      <div class="col-lg-6 hero-image" id="image-2" data-aos="fade-left" data-aos-delay="600" style="text-align: center; display: none;">
+        </div>
+        
+        <div class="col-lg-6 hero-image" id="image-2" data-aos="fade-left" data-aos-delay="600" style="text-align: center;">
           <img id="car-image-2" src="/ducat.png" alt="Kamper Tirana Audi" class="img-fluid animated-image">
           
           <div class="icon-details">
@@ -193,8 +217,7 @@
                   <img src="/icons8-speed-meter-50.png" width="40px" alt=""> <span id="status-2" style="color: black;">ON</span>
               </div>
           </div>
-      </div>
-      
+        </div>
     </div>
     
     
@@ -532,7 +555,7 @@
               Fiat Ducato camper</h3>
             <p>6 people capacity, 1900cc engine and ...</p>
             <ul>
-              <li><i class="bi bi-check"></i> <span>
+              <li><i class="bi bi-check text-success"></i> <span>
 
                   Consumption: 8-9 liters
                 </span></li>
@@ -1219,7 +1242,7 @@
               <p class="post-category">Adventure</p>
 
               <h2 class="title">
-                <a href="blog-details.html">Discover the beauty of Albania with the Volkswagen Transporter (Shkodra) and 
+                <a href="https://www.instagram.com/tiranacampersalbania/">Discover the beauty of Albania with the Volkswagen Transporter (Shkodra) and 
                   Renault Trafic (Saranda) campers, designed for unforgettable journeys. 💚</a>
               </h2>
 
@@ -1246,7 +1269,7 @@
               <p class="post-category">Adventure</p>
 
               <h2 class="title">
-                <a href="blog-details.html">We’ve thought of everything so you can focus on the journey. 🌿🚐</a>
+                <a href="https://www.instagram.com/tiranacampersalbania/">We’ve thought of everything so you can focus on the journey. 🌿🚐</a>
               </h2>
 <!-- 
               <div class="d-flex align-items-center">
@@ -1272,7 +1295,7 @@
               <p class="post-category">Entertainment</p>
 
               <h2 class="title">
-                <a href="blog-details.html">There’s nothing better than relaxing under the sun tent after a day of exploring Albania’s wild side. 🌲✨</a>
+                <a href="https://www.instagram.com/tiranacampersalbania/">There’s nothing better than relaxing under the sun tent after a day of exploring Albania’s wild side. 🌲✨</a>
               </h2>
 
               <!-- <div class="d-flex align-items-center">
@@ -1292,12 +1315,14 @@
        
       </div>
       <div style="display: flex; justify-content: center; align-items: center; width: 100%; margin-top: 20px;">
-        <button  href="blog.html" style="padding: 10px 20px; font-size: 16px; border: none; background-color: #007bff; color: white; border-radius: 5px; cursor: pointer; transition: background 0.3s ease;" 
+        <button style="padding: 10px 20px; font-size: 16px; border: none; background-color: #007bff; color: white; border-radius: 5px; cursor: pointer; transition: background 0.3s ease;" 
             onmouseover="this.style.backgroundColor='#0056b3'" 
-            onmouseout="this.style.backgroundColor='#007bff'">
+            onmouseout="this.style.backgroundColor='#007bff'"
+            onclick="window.location.href='blog.html'">
             More
         </button>
     </div>
+    
     </section><!-- /Recent Posts Section -->
 
     <!-- Contact Section -->
@@ -1523,24 +1548,96 @@
   <!-- Preloader -->
   <div id="preloader"></div>
 
-  <script>
-    let currentImage = 1; // Përcakton që të fillojë nga div-i 1
-
-    function switchImages() {
-        if (currentImage === 1) {
-            document.getElementById("image-1").style.display = "none";  // Fsheh div-in e parë
-            document.getElementById("image-2").style.display = "block"; // Shfaq div-in e dytë
-            currentImage = 2; // Ndërron në div-in e dytë
-        } else {
-            document.getElementById("image-2").style.display = "none";  // Fsheh div-in e dytë
-            document.getElementById("image-1").style.display = "block"; // Shfaq div-in e parë
-            currentImage = 1; // Ndërron në div-in e parë
-        }
+  <style>
+    /* Përcaktimi i animacionit për shfaqjen e elementeve */
+    .slide-in {
+      animation: slideIn 1s ease-in-out forwards;
     }
-
-    // Cakto intervalin për të ndërruar div-in çdo 5 sekonda
-    setInterval(switchImages, 5000);
-</script>
+  
+    /* Krijimi i animacionit të 'slide' */
+    @keyframes slideIn {
+      from {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  
+    .hidden {
+      display: none;
+    }
+  
+    /* Fsheh div-in në fillim */
+    .hero-image {
+      display: none;
+    }
+  </style>
+  
+  <div class="col-lg-6 hero-image" id="image-1" data-aos="fade-left" data-aos-delay="600" style="text-align: center;">
+    <img id="car-image-1" src="/volkswagen.png" alt="Kamper Tirana Volkswagen" class="img-fluid animated-image">
+    
+    <div class="icon-details">
+        <div class="icon-item">
+            <img src="/icons8-turbo-50.png" width="40px" alt=""> <span id="engine-1" style="color: black;">2500cc</span>
+        </div>
+        <div class="icon-item">
+            <img src="/icons8-gas-station-24.png" width="40px" alt=""> <span id="fuel-consumption-1" style="color: black;">8-9/100km</span>
+        </div>
+        <div class="icon-item">
+            <img src="/icons8-clutch-pedal-48.png" width="40px" alt=""> <span id="transmission-1" style="color: black;">Manual</span>
+        </div>
+        <div class="icon-item">
+            <img src="/icons8-speed-meter-50.png" width="40px" alt=""> <span id="status-1" style="color: black;">ON</span>
+        </div>
+    </div>
+  </div>
+  
+  <div class="col-lg-6 hero-image" id="image-2" data-aos="fade-left" data-aos-delay="600" style="text-align: center;">
+    <img id="car-image-2" src="/ducat.png" alt="Kamper Tirana Audi" class="img-fluid animated-image">
+    
+    <div class="icon-details">
+        <div class="icon-item">
+            <img src="/icons8-turbo-50.png" width="40px" alt=""> <span id="engine-2" style="color: black;">1900cc</span>
+        </div>
+        <div class="icon-item">
+            <img src="/icons8-gas-station-24.png" width="40px" alt=""> <span id="fuel-consumption-2" style="color: black;">8-9/100km</span>
+        </div>
+        <div class="icon-item">
+            <img src="/icons8-clutch-pedal-48.png" width="40px" alt=""> <span id="transmission-2" style="color: black;">Manual</span>
+        </div>
+        <div class="icon-item">
+            <img src="/icons8-speed-meter-50.png" width="40px" alt=""> <span id="status-2" style="color: black;">ON</span>
+        </div>
+    </div>
+  </div>
+  
+  <script>
+      let currentImage = 1; // Përcakton që të fillojë nga div-i 1
+  
+      function switchImages() {
+          if (currentImage === 1) {
+              document.getElementById("image-1").style.display = "none";  // Fsheh div-in e parë
+              document.getElementById("image-2").style.display = "block"; // Shfaq div-in e dytë
+              document.getElementById("image-2").classList.add('slide-in'); // Shtoni animacionin për shfaqje
+              currentImage = 2; // Ndërron në div-in e dytë
+          } else {
+              document.getElementById("image-2").style.display = "none";  // Fsheh div-in e dytë
+              document.getElementById("image-1").style.display = "block"; // Shfaq div-in e parë
+              document.getElementById("image-1").classList.add('slide-in'); // Shtoni animacionin për shfaqje
+              currentImage = 1; // Ndërron në div-in e parë
+          }
+      }
+  
+      // Cakto intervalin për të ndërruar div-in çdo 5 sekonda
+      window.onload = function() {
+        document.getElementById("image-1").style.display = "block"; // Shfaq div-in e parë menjëherë
+        setInterval(switchImages, 5000); // Kaloni mes div-ëve çdo 5 sekonda
+    }
+  </script>
+  
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
