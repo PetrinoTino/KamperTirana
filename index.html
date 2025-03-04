@@ -56,8 +56,30 @@
       text-decoration: none;
     }
 
-  
-    
+      .animated-image {
+        max-width: 100%;
+        height: auto;
+        width: 600px;
+        transition: transform 0.8s ease-in-out;
+    }
+
+    .hero-image:hover .animated-image {
+        transform: scale(1.1) translateX(20px);
+    }
+    .icon-details {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 kolona */
+        gap: 15px; /* Hapësira mes ikonave */
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .icon-item {
+        display: flex;
+        align-items: center;
+        gap: 8px; /* Hapësira mes ikonës dhe tekstit */
+        font-size: 1.2rem;
+    }
   </style>
 </head>
 
@@ -68,11 +90,11 @@
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="./Tirana-campers-albania-logo-250.png" alt="">
+        <img src="./Tirana-campers-albania-logo-250.png" alt="" >
         <h1 class="sitename">Kamper Tirana</h1><span>.</span>
       </a>
 
-      <nav id="navmenu" class="navmenu">
+      <nav id="navmenu" class="navmenu" >
         <ul>
           <li><a href="index.html#hero" class="active">Home</a></li>
           <li><a href="index.html#about">About us</a></li>
@@ -95,21 +117,39 @@
   <main class="main">
 
     <!-- Hero Section -->
-    <section id="hero" class="hero-section dark-bg" style="width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center; background-color: #121212; color: #fff;">
+    <section id="hero" class="hero-section dark-bg" style="width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center; background-color: #d75a5ad0; color: #fff;">
       <div class="container">
-          <div class="row align-items-center">
-              <div class="col-lg-6 hero-content">
-                  <h2 class="hero-title" data-aos="fade-up" data-aos-delay="100" style="font-size: 3rem; font-weight: bold; color: orange;">Kamper Tirana</h2>
-                  <p class="hero-text" data-aos="fade-up" data-aos-delay="200" style="font-size: 1.2rem;">Absolute adventure maker 🧭</p>
-                  <p class="hero-text" data-aos="fade-up" data-aos-delay="300" style="font-size: 1.2rem;">3 campers: Tirana, Shkodra and Saranda 🚐</p>
-                  <p class="hero-text" data-aos="fade-up" data-aos-delay="400" style="font-size: 1.2rem;">Best experience, affordable prices ⭐️</p>
-                  <p class="hero-text" data-aos="fade-up" data-aos-delay="500" style="font-size: 1.2rem;">Explore Albania and beyond 🌍</p>
-              </div>
-              <div class="col-lg-6 hero-image" data-aos="fade-left" data-aos-delay="600" style="text-align: center;">
-                  <img src="/volkswagen.png" alt="Kamper Tirana Volkswagen" class="img-fluid" style="max-width: 500px; height: 300px;">
-              </div>
-          </div>
-      </div>
+        <div class="row align-items-center">
+            <div class="col-lg-6 hero-content">
+                <h2 class="hero-title" data-aos="fade-up" data-aos-delay="100" style="font-size: 3rem; font-weight: bold; color: orange;">Kamper Tirana</h2>
+                <p class="hero-text" data-aos="fade-up" data-aos-delay="200" style="font-size: 1.2rem;">Absolute adventure maker 🧭</p>
+                <p class="hero-text" data-aos="fade-up" data-aos-delay="300" style="font-size: 1.2rem;">3 campers: Tirana, Shkodra and Saranda 🚐</p>
+                <p class="hero-text" data-aos="fade-up" data-aos-delay="400" style="font-size: 1.2rem;">Best experience, affordable prices ⭐️</p>
+                <p class="hero-text" data-aos="fade-up" data-aos-delay="500" style="font-size: 1.2rem;">Explore Albania and beyond 🌍</p>
+            </div>
+            <div class="col-lg-6 hero-image" data-aos="fade-left" data-aos-delay="600" style="text-align: center;">
+                <img src="/volkswagen.png" alt="Kamper Tirana Volkswagen" class="img-fluid animated-image">
+                
+                <div class="icon-details">
+                    <div class="icon-item">
+                        <img src="/icons8-turbo-50.png" width="40px" alt=""> <span>2500cc</span>
+                    </div>
+                    <div class="icon-item">
+                        <img src="/icons8-gas-station-24.png" width="40px" alt=""> <span>8 - 9 / 100km</span>
+                    </div>
+                    <div class="icon-item">
+                        <img src="/icons8-clutch-pedal-48.png" width="40px" alt=""> <span>Manual</span>
+                    </div>
+                    <div class="icon-item">
+                        <img src="/icons8-speed-meter-50.png" width="40px" alt=""> <span>ON</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
 
           <!-- <a href="https://api.whatsapp.com/send?phone=355692041170" class="whatsapp-float" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
@@ -187,7 +227,8 @@
                 <div class="icon-box">
                   <i class="bi bi-clipboard-pulse"></i>
                   <!-- <h3>Rerum aperiam</h3> -->
-                  <p> <strong>We</strong> believe in transparent pricing and clear rental terms, ensuring our customers can plan and
+                  <p> 
+                    <strong>We</strong> believe in transparent pricing and clear rental terms, ensuring our customers can plan and
                     budget confidently.</p>
                 </div>
               </div> <!-- End Icon Box -->
@@ -228,7 +269,11 @@
         <div class="row gy-4">
           <div class="col-lg-4 col-md-6">
             <div class="stats-item text-center w-100 h-100" style="background: #ffffff15; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
-              <h3 style="color: orange; margin-bottom: 10px;">Pricing and No Hidden Fees</h3>
+              
+              <h3 style="color: orange; margin-bottom: 10px;">
+                
+                Pricing and No Hidden Fees</h3>
+                
               <p style="color: #d4d4d4; font-size: 1rem;">Our pricing is clear and straightforward, with no hidden fees. What you see is what you get.</p>
             </div>
           </div><!-- End Stats Item -->
@@ -417,8 +462,10 @@
               <li><i class="bi bi-check text-success"></i> <span> Economic Deposit 500,00 €</span>.</li>
 
             </ul>
-            <a href="#" class="btn btn-get-started">Get Started</a>
+            <div class="d-flex justify-content-center">
+              <a href="#" class="btn btn-get-started">Get Started</a>
           </div>
+                    </div>
           <div class="col-lg-7 order-1 order-lg-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
             <div class="image-stack">
               <img src="./Volkswagen.jpg" alt="" class="stack-front">
@@ -453,8 +500,10 @@
                   Refrigerator and gas cooking</span>.</li>
               <li><i class="bi bi-check text-success"></i> <span> Economic Deposit 1000,00 €</span>.</li>
             </ul>
-            <a href="#" class="btn btn-get-started align-self-start">Get Started</a>
+            <div class="d-flex justify-content-center">
+              <a href="#" class="btn btn-get-started">Get Started</a>
           </div>
+                    </div>
         </div><!-- Features Item -->
         <div class="row gy-4 align-items-stretch justify-content-between features-item ">
           <div class="col-lg-6 d-flex align-items-center features-img-bg" data-aos="zoom-out">
@@ -489,8 +538,10 @@
               <li><i class="bi bi-check text-success"></i> <span> Economic Deposit 500,00 €</span>.</li>
 
             </ul>
-            <a href="#" class="btn btn-get-started align-self-start">Get Started</a>
+            <div class="d-flex justify-content-center">
+              <a href="#" class="btn btn-get-started">Get Started</a>
           </div>
+                    </div>
         </div><!-- Features Item -->
 
       </div>
@@ -512,9 +563,9 @@
 
           <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
             <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-product">Card</li>
-            <li data-filter=".filter-branding">Web</li>
+            <li data-filter=".filter-app">Fiat</li>
+            <li data-filter=".filter-product">Renault</li>
+            <li data-filter=".filter-branding">Volvo</li>
           </ul><!-- End Portfolio Filters -->
 
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
@@ -524,7 +575,7 @@
               <div class="portfolio-info">
                 <h4>App 1</h4>
                 <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" title="App 1"
+                <a href="./assets/img/fiat/f1.jpg" title="App 1"
                   data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 <a href="portfolio-details.html" title="More Details" class="details-link"><i
                     class="bi bi-link-45deg"></i></a>
@@ -536,7 +587,7 @@
               <div class="portfolio-info">
                 <h4>Product 1</h4>
                 <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" title="Product 1"
+                <a href="/assets/img/fiat/f2.jpg" title="Product 1"
                   data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
                     class="bi bi-zoom-in"></i></a>
                 <a href="portfolio-details.html" title="More Details" class="details-link"><i
@@ -549,7 +600,7 @@
               <div class="portfolio-info">
                 <h4>Branding 1</h4>
                 <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" title="Branding 1"
+                <a href="/assets/img/fiat/f3.jpg" title="Branding 1"
                   data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
                     class="bi bi-zoom-in"></i></a>
                 <a href="portfolio-details.html" title="More Details" class="details-link"><i
@@ -562,7 +613,7 @@
               <div class="portfolio-info">
                 <h4>App 2</h4>
                 <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" title="App 2"
+                <a href="/assets/img/fiat/f4.jpg" title="App 2"
                   data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 <a href="portfolio-details.html" title="More Details" class="details-link"><i
                     class="bi bi-link-45deg"></i></a>
@@ -574,7 +625,7 @@
               <div class="portfolio-info">
                 <h4>Product 2</h4>
                 <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" title="Product 2"
+                <a href="/assets/img/fiat/f5.jpg" title="Product 2"
                   data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
                     class="bi bi-zoom-in"></i></a>
                 <a href="portfolio-details.html" title="More Details" class="details-link"><i
@@ -587,7 +638,7 @@
               <div class="portfolio-info">
                 <h4>Branding 2</h4>
                 <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" title="Branding 2"
+                <a href="/assets/img/fiat/f6.jpg" title="Branding 2"
                   data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
                     class="bi bi-zoom-in"></i></a>
                 <a href="portfolio-details.html" title="More Details" class="details-link"><i
@@ -643,13 +694,12 @@
       </div>
 
     </section><!-- /Portfolio Section -->
-
     <!-- Pricing Section -->
     <section id="pricing" class="pricing section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Rent a campers</h2>
+        <h2>Rent </h2>
          <p>Start your adventure today by visiting our website at www.CamperTirana.com.<br>
           Your camper rental awaits!</p>
       </div><!-- End Section Title -->
