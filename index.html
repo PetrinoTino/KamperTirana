@@ -56,7 +56,12 @@
       text-decoration: none;
     }
 
-    
+    .hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
     
   </style>
 </head>
@@ -77,28 +82,11 @@
           <li><a href="index.html#hero" class="active">Home</a></li>
           <li><a href="index.html#about">About us</a></li>
           <li><a href="index.html#services">Services</a></li>
-          <li><a href="index.html#portfolio">Portfolio</a></li>
+          <li><a href="index.html#portfolio">Gallery</a></li>
           <li><a href="index.html#pricing">Pricing</a></li>
           <li><a href="index.html#team">Team</a></li>
           <li><a href="blog.html">Blog</a></li>
-          <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i
-                    class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li> -->
-              <!-- <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li> -->
+      
           <li><a href="index.html#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -112,26 +100,22 @@
   <main class="main">
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
-
-      <img src="./Rent-Fiat-Ducat-campers-in-albania-04.jpg" alt="" data-aos="fade-in">
-
+    <section id="hero" class="hero-section dark-bg" style="width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center; background-color: #121212; color: #fff;">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-10">
-            <h2 data-aos="fade-up" data-aos-delay="100" style="color: orange;">Kamper Tirana</h2>
-            <p data-aos="fade-up" data-aos-delay="200" style="color: white;"> Absolute adventure maker 🧭
-           
-             
-              
-            </p>
-            <p data-aos="fade-up" data-aos-delay="200" style="color: white;">    3 campers: Tirana, Shkodra and Saranda 🚐</p>
-            <p data-aos="fade-up" data-aos-delay="200" style="color: white;">  Best experience, affordable prices ⭐️</p>
-            <p data-aos="fade-up" data-aos-delay="200" style="color: white;"> Explore Albania and beyond 🌍</p>
+          <div class="row align-items-center">
+              <div class="col-lg-6 hero-content">
+                  <h2 class="hero-title" data-aos="fade-up" data-aos-delay="100" style="font-size: 3rem; font-weight: bold; color: orange;">Kamper Tirana</h2>
+                  <p class="hero-text" data-aos="fade-up" data-aos-delay="200" style="font-size: 1.2rem;">Absolute adventure maker 🧭</p>
+                  <p class="hero-text" data-aos="fade-up" data-aos-delay="300" style="font-size: 1.2rem;">3 campers: Tirana, Shkodra and Saranda 🚐</p>
+                  <p class="hero-text" data-aos="fade-up" data-aos-delay="400" style="font-size: 1.2rem;">Best experience, affordable prices ⭐️</p>
+                  <p class="hero-text" data-aos="fade-up" data-aos-delay="500" style="font-size: 1.2rem;">Explore Albania and beyond 🌍</p>
+              </div>
+              <div class="col-lg-6 hero-image" data-aos="fade-left" data-aos-delay="600" style="text-align: center;">
+                  <img src="/volkswagen.png" alt="Kamper Tirana Volkswagen" class="img-fluid" style="max-width: 500px; height: 300px;">
+              </div>
           </div>
-     
-        </div>
       </div>
+
       <a href="https://api.whatsapp.com/send?phone=355692041170" class="whatsapp-float" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
       </a>
@@ -227,7 +211,7 @@
                 <div class="icon-box">
                   <i class="bi bi-graph-up-arrow"></i>
                   <!-- <h3>Delares sapiente</h3> -->
-                  <p><strong>Our</strong>dedicated team is committed to providing personalized service, from helping you choose the
+                  <p><strong>Our</strong> dedicated team is committed to providing personalized service, from helping you choose the
                     right camper to offering support throughout your journey.</p>
                 </div>
               </div> <!-- End Icon Box -->
@@ -248,26 +232,24 @@
       <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
 
         <div class="row gy-4">
-
           <div class="col-lg-4 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <h3 style="color: orange;">Pricing and No Hidden Fees</h3>
-              <p>Our pricing is clear and straightforward, with no hidden fees. What you see is what you get.</p>
+            <div class="stats-item text-center w-100 h-100" style="background: #ffffff15; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+              <h3 style="color: orange; margin-bottom: 10px;">Pricing and No Hidden Fees</h3>
+              <p style="color: #d4d4d4; font-size: 1rem;">Our pricing is clear and straightforward, with no hidden fees. What you see is what you get.</p>
             </div>
           </div><!-- End Stats Item -->
-
+      
           <div class="col-lg-4 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <h3 style="color: orange;">Knowledge & Suggestions</h3>
-              <p>As outdoor enthusiasts ourselves, we provide insider tips, destination
-                recommendations, and local insights to help you make the most of your adventure.</p>
+            <div class="stats-item text-center w-100 h-100" style="background: #ffffff26; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+              <h3 style="color: orange; margin-bottom: 10px;">Knowledge & Suggestions</h3>
+              <p style="color: #d4d4d4; font-size: 1rem;">As outdoor enthusiasts ourselves, we provide insider tips, destination recommendations, and local insights to help you make the most of your adventure.</p>
             </div>
           </div><!-- End Stats Item -->
-
+      
           <div class="col-lg-4 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <h3 style="color: orange;">Easy Booking Process</h3>
-              <p>Our user-friendly website make it effortless to browse, select, and secure your preferred camper.</p>
+            <div class="stats-item text-center w-100 h-100" style="background: #ffffff1b; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+              <h3 style="color: orange; margin-bottom: 10px;">Easy Booking Process</h3>
+              <p style="color: #d4d4d4; font-size: 1rem;">Our user-friendly website makes it effortless to browse, select, and secure your preferred camper.</p>
             </div>
           </div><!-- End Stats Item -->
 
@@ -420,22 +402,25 @@
               2 people capacity, 1900cc engine and ...
             </p>
             <ul>
-              <li><i class="bi bi-check"></i> <span>
+              <li><i class="bi bi-check text-success"></i>
+                <span>
 
                   Consumption: 8-9 liters
                 </span></li>
-              <li><i class="bi bi-check"></i><span> External shower 40 liters.</span></li>
-              <li><i class="bi bi-check"></i> <span> Conditioner</span>.</li>
+              <li><i class="bi bi-check text-success"></i>
+                <span> External shower 40 liters.</span></li>
+              <li><i class="bi bi-check text-success"></i>
+              </i> <span> Conditioner</span>.</li>
 
-              <li><i class="bi bi-check"></i><span> Sink with 10 liters of water</span></li>
-              <li><i class="bi bi-check"></i> <span> Refrigerator</span>.</li>
+              <li><i class="bi bi-check text-success"></i><span> Sink with 10 liters of water</span></li>
+              <li><i class="bi bi-check text-success"></i> <span> Refrigerator</span>.</li>
 
-              <li><i class="bi bi-check"></i><span> Portable WC</span></li>
-              <li><i class="bi bi-check"></i> <span> Sun tent</span>.</li>
-              <li><i class="bi bi-check"></i><span> 2 batteries for internal lighting and water pumps</span></li>
-              <li><i class="bi bi-check"></i> <span>
+              <li><i class="bi bi-check text-success"></i><span> Portable WC</span></li>
+              <li><i class="bi bi-check text-success"></i> <span> Sun tent</span>.</li>
+              <li><i class="bi bi-check text-success"></i><span> 2 batteries for internal lighting and water pumps</span></li>
+              <li><i class="bi bi-check text-success"></i> <span>
                   Refrigerator and gas cooking</span>.</li>
-              <li><i class="bi bi-check"></i> <span> Economic Deposit 500,00 €</span>.</li>
+              <li><i class="bi bi-check text-success"></i> <span> Economic Deposit 500,00 €</span>.</li>
 
             </ul>
             <a href="#" class="btn btn-get-started">Get Started</a>
@@ -461,18 +446,18 @@
 
                   Consumption: 8-9 liters
                 </span></li>
-              <li><i class="bi bi-check"></i><span> External shower 200 liters.</span></li>
-              <li><i class="bi bi-check"></i> <span> Conditioner</span>.</li>
+              <li><i class="bi bi-check text-success"></i><span> External shower 200 liters.</span></li>
+              <li><i class="bi bi-check text-success"></i> <span> Conditioner</span>.</li>
 
-              <li><i class="bi bi-check"></i><span> Sink with 10 liters of water</span></li>
-              <li><i class="bi bi-check"></i> <span> Refrigerator</span>.</li>
+              <li><i class="bi bi-check text-success"></i><span> Sink with 10 liters of water</span></li>
+              <li><i class="bi bi-check text-success"></i> <span> Refrigerator</span>.</li>
 
-              <li><i class="bi bi-check"></i><span> Portable WC</span></li>
-              <li><i class="bi bi-check"></i> <span> Sun tent</span>.</li>
-              <li><i class="bi bi-check"></i><span> 2 batteries for internal lighting and water pumps</span></li>
-              <li><i class="bi bi-check"></i> <span>
+              <li><i class="bi bi-check text-success"></i><span> Portable WC</span></li>
+              <li><i class="bi bi-check text-success"></i> <span> Sun tent</span>.</li>
+              <li><i class="bi bi-check text-success"></i><span> 2 batteries for internal lighting and water pumps</span></li>
+              <li><i class="bi bi-check text-success"></i> <span>
                   Refrigerator and gas cooking</span>.</li>
-              <li><i class="bi bi-check"></i> <span> Economic Deposit 1000,00 €</span>.</li>
+              <li><i class="bi bi-check text-success"></i> <span> Economic Deposit 1000,00 €</span>.</li>
             </ul>
             <a href="#" class="btn btn-get-started align-self-start">Get Started</a>
           </div>
@@ -485,7 +470,7 @@
             <h3>Renault Trafic camper</h3>
             <p>2 people capacity, 2500cc engine and ...</p>
             <ul>
-              <li><i class="bi bi-check"></i> <span>
+              <li><i class="bi bi-check text-success"></i> <span>
 
                   Consumption: 8-9 liters
 
@@ -496,18 +481,18 @@
 
 
                 </span></li>
-              <li><i class="bi bi-check"></i><span> External shower 40 liters.</span></li>
-              <li><i class="bi bi-check"></i> <span> Conditioner</span>.</li>
+              <li><i class="bi bi-check text-success"></i><span> External shower 40 liters.</span></li>
+              <li><i class="bi bi-check text-success"></i> <span> Conditioner</span>.</li>
 
-              <li><i class="bi bi-check"></i><span> Sink with 10 liters of water</span></li>
-              <li><i class="bi bi-check"></i> <span> Refrigerator</span>.</li>
+              <li><i class="bi bi-check text-success"></i><span> Sink with 10 liters of water</span></li>
+              <li><i class="bi bi-check text-success"></i> <span> Refrigerator</span>.</li>
 
-              <li><i class="bi bi-check"></i><span> Portable WC</span></li>
-              <li><i class="bi bi-check"></i> <span> Sun tent</span>.</li>
-              <li><i class="bi bi-check"></i><span> 2 batteries for internal lighting and water pumps</span></li>
-              <li><i class="bi bi-check"></i> <span>
+              <li><i class="bi bi-check text-success"></i><span> Portable WC</span></li>
+              <li><i class="bi bi-check text-success"></i> <span> Sun tent</span>.</li>
+              <li><i class="bi bi-check text-success"></i><span> 2 batteries for internal lighting and water pumps</span></li>
+              <li><i class="bi bi-check text-success"></i> <span>
                   Refrigerator and gas cooking</span>.</li>
-              <li><i class="bi bi-check"></i> <span> Economic Deposit 500,00 €</span>.</li>
+              <li><i class="bi bi-check text-success"></i> <span> Economic Deposit 500,00 €</span>.</li>
 
             </ul>
             <a href="#" class="btn btn-get-started align-self-start">Get Started</a>
@@ -946,30 +931,29 @@
           <div class="col-xl-10">
             <div class="text-center">
               <h2>
-                <a href="mailto:tiranacampersalbania@gmail.com" class="topbar-item link">
-                  <div class="icon">
-                    <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
-                  </div>
-
-                  <span class="span">tiranacampersalbania@gmail.com</span>
-              </h2>
-              </a>
+                <a href="mailto:tiranacampersalbania@gmail.com" style="text-decoration: none; color: white; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
+                  <ion-icon name="mail-outline" style="font-size: 1.5rem; margin-right: 8px;"></ion-icon>
+                  <span>tiranacampersalbania@gmail.com</span>
+                </a>
+            </h2>
+             
               <h2>
-                <a href="tel:082 210 005" class="topbar-item link">
-                  <div class="icon">
-                    <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
-                  </div>
-
-                  <span class="span"> +355692041170</span>
+                <a href="tel:+355692041170" style="text-decoration: none; color: white; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
+                  <ion-icon name="call-outline" style="font-size: 1.5rem; margin-right: 8px;"></ion-icon>
+                  <span>+355 69 204 1170</span>
                 </a>
               </h2>
-              <a class="cta-btn" href="tel:082 210 005" class="topbar-item link">Call </a>
+              <a href="tel:+355692041170" style="display: inline-block; background-color: #28a745; color: white; font-size: 1.2rem; font-weight: bold; padding: 12px 24px; border-radius: 30px; text-decoration: none; margin-top: 20px;">
+                📞 Call Now
+              </a>
             </div>
           </div>
         </div>
       </div>
 
-    </section><!-- /Call To Action Section -->
+    </section>
+    
+    <!-- /Call To Action Section -->
 
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials section light-background">
@@ -1229,7 +1213,7 @@
       <div class="container section-title" data-aos="fade-up">
         <h2>Contact</h2>
         <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
-      </div><!-- End Section Title -->
+      </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
