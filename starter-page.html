@@ -27,13 +27,30 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Append
-  * Template URL: https://bootstrapmade.com/append-bootstrap-website-template/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <style>
+
+    .container {
+        width: 80%;
+        padding: 20px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 2px 2px 10px #ddd;
+    }
+    input, select, textarea, button {
+        width: 100%;
+        margin: 10px 0;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+    button {
+        background: #ff4500;
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+    }
+</style>
 </head>
 
 <body class="starter-page-page">
@@ -59,20 +76,7 @@
           <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>
+        
           <li><a href="index.html#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -86,258 +90,104 @@
   <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title" data-aos="fade">
-      <div class="heading">
-        <div class="container">
-          <div class="row d-flex justify-content-center text-center">
-            <div class="col-lg-8">
-              <h1>Starter Page</h1>
-              <p class="mb-0">Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <nav class="breadcrumbs">
-        <div class="container">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Starter Page</li>
-          </ol>
-        </div>
-      </nav>
-    </div><!-- End Page Title -->
 
+      
+<div class="container">
+  <h2>Camper Booking Form</h2>
+  <form id="bookingForm">
+      <label>Your Name</label>
+      <input type="text" id="name" required>
+      
+      <label>Your E-mail</label>
+      <input type="email" id="email" required>
+
+      <label>Choose a Camper</label>
+      <select id="camper">
+          <option value="shkodra">"Shkodra" camper</option>
+          <option value="tirana">"Tirana" camper</option>
+          <option value="saranda">"Saranda" camper</option>
+      </select>
+
+      <p><strong>Economic Deposit: </strong><span id="economicDeposit">500</span> €</p>
+      <p><strong>Deposit: </strong><span id="deposit">1000</span> €</p>
+
+      <label>Choose Deposit Type</label>
+      <select id="depositType">
+          <option value="Economic Deposit">Economic Deposit</option>
+          <option value="Full Deposit">Full Deposit</option>
+      </select>
+
+      <label>Subject</label>
+      <input type="text" id="subject" required>
+
+      <label>Message</label>
+      <textarea id="message" required></textarea>
+
+      <button type="submit">Send a message</button>
+  </form>
+
+  <p id="response"></p>
+</div>
     <!-- Starter Section Section -->
-    <section id="starter-section" class="starter-section section">
+    
 
-      <div class="container" data-aos="fade-up">
-        <p>Use this page as a starter for your own custom pages.</p>
-      </div>
-
-    </section><!-- /Starter Section Section -->
-
-  </main>
-
-</section><!-- /Recent Posts Section -->
-
-<!-- Contact Section -->
-<section id="contact" class="contact section">
-
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Contact</h2>
-    <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
-  </div>
-
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-    <div class="row gy-4">
-
-      <div class="col-lg-6">
-
-        <div class="row gy-4">
-          <div class="col-md-6">
-            <div class="info-item" data-aos="fade" data-aos-delay="200">
-              <i class="bi bi-geo-alt"></i>
-              <h3>Address</h3>
-            <p>Bulevardi Gjergj Fishta,</p>
-              <p>Pallati E 88, Shkalla 1, Ap 9
-                Ish Ekspozita Shqiperia Sot</p>
-              <p>Tirana</p>
-              <p>Albania</p>
-            </div>
-          </div><!-- End Info Item -->
-
-          <div class="col-md-6">
-            <div class="info-item" data-aos="fade" data-aos-delay="300">
-              <i class="bi bi-telephone"></i>
-              <h3>Call Us</h3>
-
-              <a href="tel:082 210 005" class="topbar-item link">
-                <div class="icon">
-                  <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
-                </div>
-
-                <span class="span"> +355692041170</span>
-              </a>
-            </div>
-          </div><!-- End Info Item -->
-
-          <div class="col-md-6">
-            <div class="info-item" data-aos="fade" data-aos-delay="400">
-                <i class="bi bi-envelope"></i>
-                <h3>Email Us</h3>
-        
-                <a href="mailto:tiranacampersalbania@gmail.com" class="topbar-item link">
-                    <div class="icon">
-                        <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
-                    </div>
-        
-                    <div class="email-box">
-                     <p>  <span class="span"  >tiranacampersalbania@gmail.com</span></p> 
-                    </div>
-                </a>
-            </div>
-        </div><!-- End Info Item -->
-        
-
-          <div class="col-md-6">
-            <div class="info-item" data-aos="fade" data-aos-delay="500">
-              <i class="bi bi-clock"></i>
-              <h3>Open Hours</h3>
-              <p>Monday - Friday</p>
-              <p>9:00AM - 05:00PM</p>
-            </div>
-          </div><!-- End Info Item -->
-
-        </div>
-
-      </div>
-
-      <div class="col-lg-6">
-        <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
-          data-aos-delay="200">
-          <div class="row gy-4">
-
-            <div class="col-md-6">
-              <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-            </div>
-
-            <div class="col-md-6 ">
-              <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-            </div>
-
-            <div class="col-12">
-              <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-            </div>
-
-            <div class="col-12">
-              <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-            </div>
-
-            <div class="col-12 text-center">
-              <div class="loading" style="display: none;">Loading...</div>
-              <div class="error-message" style="color: red;"></div>
-              <div class="sent-message" style="color: green; display: none;">Your message has been sent. Thank you!
-              </div>
-
-              <a href="mailto:tiranacampersalbania@gmail.com?subject=New Inquiry&body=Hello,%20I%20want%20to%20contact%20you."
-                class="topbar-item link">
-                <button type="button">Send Email</button>
-              </a>
-            </div>
-
-
-          </div>
-        </form>
-      </div><!-- End Contact Form -->
-
-
-
-
-
-<footer id="footer" class="footer position-relative light-background">
-
-<div class="container footer-top">
-  <div class="row gy-4">
-    <div class="col-lg-5 col-md-12 footer-about">
-      <a href="index.html" class="logo d-flex align-items-center">
-        <span class="sitename">Kamper Tirana</span>
-      </a>
-      <p style="font-size: 20px; font-weight: bolder;color: orange;">Start your adventure today. <br> 
-        Your camper rental awaits!
-        </p>
-      <div class="social-links d-flex mt-4">
-        <!-- <a href=""><i class="bi bi-twitter-x"></i></a>
-        <a href=""><i class="bi bi-facebook"></i></a> -->
-        <a href="https://www.instagram.com/tiranacampersalbania/"><i class="bi bi-instagram"></i></a>
-        <!-- <a href=""><i class="bi bi-linkedin"></i></a> -->
-      </div>
-    </div>
-
-    <div class="col-lg-2 col-6 footer-links">
-      <h4>Useful Links</h4>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About us</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Terms of service</a></li>
-        <li><a href="#">Privacy policy</a></li>
-      </ul>
-    </div>
-
-    <div class="col-lg-2 col-6 footer-links">
-      <h4>Our Services</h4>
-      <ul>
-        <li><a href="#">Easy Booking Process
-        </a></li>
-        <li><a href="#">Knowledge & Suggestions</a></li>
-        <li><a href="#">Pricing and No Hidden Fees</a></li>
-       
-      </ul>
-    </div>
-
-    <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-      <h4>Contact Us</h4>
-      <p>Bulevardi Gjergj Fishta,</p>
-      <p>Pallati E 88, Shkalla 1, Ap 9
-        Ish Ekspozita Shqiperia Sot</p>
-      <p>Tirana</p>
-      <p>Albania</p>
-      
-
-
-      <p class="mt-4"><strong>Phone:</strong>
-        
-        
-        <a href="tel:082 210 005" class="topbar-item link">
-          <div class="icon">
-            <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
-          </div>
-
-          <span class="span"> +355692041170</span>
-        </a>
-      
-      
-      
-      </p>
-
-
-      <p><strong>Email:</strong>       <a href="mailto:tiranacampersalbania@gmail.com" class="topbar-item link">
-        <div class="icon">
-            <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
-        </div>
-
-        <div class="email-box">
-         <p>  <span class="span"  >tiranacampersalbania@gmail.com</span></p> 
-        </div>
-      
-      
-      </p>
-    </div>
-
-  </div>
-</div>
-
-<div class="container copyright text-center mt-4">
-  <!-- <p>© <span>Copyright</span> <strong class="sitename">Kledi Tufa</strong> <span>All Rights Reserved</span></p> -->
-  <div class="credits">
-    <!-- All the links in the footer should remain intact. -->
-    <!-- You can delete the links only if you've purchased the pro version. -->
-    <!-- Licensing information: https://bootstrapmade.com/license/ -->
-    <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-    Designed by Kledi Tufa</a>
-  </div>
-</div>
-
-</footer>
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
   <div id="preloader"></div>
+  <script>
+    // Inicializimi i EmailJS
+    emailjs.init("3w8ivs14QVFDYcsa1"); // Vendos USER_ID nga EmailJS
 
+    // Depozitat për çdo kamper
+    const depositData = {
+        "shkodra": { economic: 500, deposit: 1000 },
+        "tirana": { economic: 600, deposit: 1200 },
+        "saranda": { economic: 450, deposit: 900 }
+    };
+
+    // Ndryshimi i depozitave në bazë të zgjedhjes së kamperit
+    document.getElementById('camper').addEventListener('change', function() {
+        const selected = this.value;
+        document.getElementById('economicDeposit').textContent = depositData[selected].economic;
+        document.getElementById('deposit').textContent = depositData[selected].deposit;
+    });
+
+    // Dërgimi i emailit me EmailJS
+    document.getElementById('bookingForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const depositType = document.getElementById('depositType').value;
+        let depositAmount = "";
+
+        // Cakto shumën bazuar në zgjedhjen e përdoruesit
+        if (depositType === "Economic Deposit") {
+            depositAmount = document.getElementById('economicDeposit').textContent;
+        } else {
+            depositAmount = document.getElementById('deposit').textContent;
+        }
+
+        const formData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            camper: document.getElementById('camper').options[document.getElementById('camper').selectedIndex].text,
+            depositType: depositType,  // Tregon në email nëse është "Economic Deposit" ose "Full Deposit"
+            depositAmount: depositAmount + " €",
+            subject: document.getElementById('subject').value,
+            message: document.getElementById('message').value
+        };
+
+        // Përdorimi i EmailJS për të dërguar emailin
+        emailjs.send("service_c9xt5hi", "template_51ay6qw", formData)
+        .then(function(response) {
+            document.getElementById('response').innerText = "Email Sent Successfully!";
+        }, function(error) {
+            document.getElementById('response').innerText = "Error Sending Email!";
+        });
+    });
+</script>
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
