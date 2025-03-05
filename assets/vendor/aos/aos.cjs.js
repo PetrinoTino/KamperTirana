@@ -413,12 +413,7 @@ var elements = (function () {
   });
 });
 
-/**
- * *******************************************************
- * AOS (Animate on scroll) - wowjs alternative
- * made to animate elements on scroll in both directions
- * *******************************************************
- */
+
 
 /**
  * Private variables
@@ -447,8 +442,7 @@ var options = {
   debounceDelay: 50
 };
 
-// Detect not supported browsers (<=IE9)
-// http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805
+
 var isBrowserNotSupported = function isBrowserNotSupported() {
   return document.all && !window.atob;
 };
