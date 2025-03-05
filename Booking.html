@@ -4,13 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Starter Page - Append Bootstrap Template</title>
+  <title>Tirana Campers Albania </title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="./Tirana-campers-albania-logo-250.png" rel="icon">
+  <link href="./Tirana-campers-albania-logo-250.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -31,7 +31,7 @@
   <style>
 
     .container {
-        width: 80%;
+        width: 60%;
         padding: 20px;
         background: white;
         border-radius: 8px;
@@ -50,50 +50,65 @@
         cursor: pointer;
         font-size: 16px;
     }
+    @media (min-width: 1024px) {
+    .container {
+        width: 60%;
+    }
+}
+
+/* Për tablet (ekrane mesatare) */
+@media (max-width: 1024px) {
+    .container {
+        width: 80%;
+    }
+}
+
+/* Për celular (ekrane të vogla) */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }}
 </style>
 </head>
 
 <body class="starter-page-page">
 
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between" >
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">Append</h1><span>.</span>
+        <img src="./Tirana-campers-albania-logo-250.png" alt="" >
+        <h1 class="sitename"> Tirana Campers Albania </h1>
       </a>
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html#hero">Home</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#services">Services</a></li>
-          <li><a href="index.html#portfolio">Portfolio</a></li>
+      <nav id="navmenu" class="navmenu" >
+        <ul >
+          <li><a href="index.html#hero" class="active">Home</a></li>
+          <li><a href="index.html#services">About us</a></li>
+          <li><a href="index.html#about">Services</a></li>
+          <li><a href="index.html#portfolio">Gallery</a></li>
           <li><a href="index.html#pricing">Pricing</a></li>
-          <li><a href="index.html#team">Team</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-        
+          <!-- <li><a href="starter-page.html">Team</a></li> -->
+
+      
           <li><a href="index.html#contact">Contact</a></li>
+          <a class="btn-getstarted" href="Booking.html">Book Now</a>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="index.html#about">Get Started</a>
+      <!-- <a class="btn-getstarted" href="index.html#about">Get Started</a> -->
 
     </div>
   </header>
-
   <main class="main">
 
     <!-- Page Title -->
-
-      
-<div class="container">
-  <h2>Camper Booking Form</h2>
+<section style="padding-top: 80px;">
+<div class="container" >
+  <h2 style="text-align: center; color: orange;">Tirana Campers Albania</h2>
   <form id="bookingForm">
       <label>Your Name</label>
       <input type="text" id="name" required>
@@ -131,7 +146,7 @@
     <!-- Starter Section Section -->
     
 
-
+  </section>
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
