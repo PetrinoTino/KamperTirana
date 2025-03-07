@@ -188,6 +188,71 @@
   }
 }
 
+@media (max-width: 1024px) and (orientation: landscape) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-content {
+    order: 1;
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 24px;
+  }
+
+  .hero-text {
+    font-size: 18px;
+  }
+
+  .hero-image {
+    order: 2;
+    max-width: 70%;
+    margin-top: 20px;
+  }
+
+  .hero-image img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .icon-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .icon-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .icon-item img {
+    width: 30px;
+    height: auto;
+  }
+
+  .icon-item span {
+    font-size: 14px;
+  }
+}
+
+
   </style>
 </head>
 
@@ -1556,7 +1621,7 @@
 
     <div class="container copyright text-center mt-4">
       <div class="credits">
-        Copyright Kledi Tufa
+        © Copyright Kledi Tufa
       </div>
     </div>
 </footer>
