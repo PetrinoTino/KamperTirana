@@ -110,36 +110,49 @@
 <div class="container" >
   <h2 style="text-align: center; color: orange;">Tirana Campers Albania</h2>
   <form id="bookingForm">
-      <label>Your Name</label>
-      <input type="text" id="name" required>
-      
-      <label>Your E-mail</label>
-      <input type="email" id="email" required>
+    <label>Your Name</label>
+    <input type="text" id="name" required>
+    
+    <label>Your Surname</label>
+    <input type="text" id="surname" required>
+    
+    <label>Your Phone Number</label>
+    <input type="tel" id="phone" required>
+    
+    <label>Your E-mail</label>
+    <input type="email" id="email" required>
 
-      <label>Choose a Camper</label>
-      <select id="camper">
-          <option value="shkodra">"Shkodra" camper</option>
-          <option value="tirana">"Tirana" camper</option>
-          <option value="saranda">"Saranda" camper</option>
-      </select>
+    <label>Choose a Camper</label>
+    <select id="camper">
+        <option value="shkodra">"Shkodra" camper</option>
+        <option value="tirana">"Tirana" camper</option>
+        <option value="saranda">"Saranda" camper</option>
+    </select>
 
-      <p><strong>Economic Deposit: </strong><span id="economicDeposit">500</span> €</p>
-      <p><strong>Deposit: </strong><span id="deposit">1000</span> €</p>
+    <p><strong>Economic Deposit: </strong><span id="economicDeposit">500</span> €</p>
+    <p><strong>Deposit: </strong><span id="deposit">1000</span> €</p>
 
-      <label>Choose Deposit Type</label>
-      <select id="depositType">
-          <option value="Economic Deposit">Economic Deposit</option>
-          <option value="Full Deposit">Full Deposit</option>
-      </select>
+    <label>Choose Deposit Type</label>
+    <select id="depositType">
+        <option value="Economic Deposit">Economic Deposit</option>
+        <option value="Full Deposit">Full Deposit</option>
+    </select>
 
-      <label>Subject</label>
-      <input type="text" id="subject" required>
+    <label>Pick Start Date</label>
+    <input type="date" id="startDate" required>
 
-      <label>Message</label>
-      <textarea id="message" required></textarea>
+    <label>Pick End Date</label>
+    <input type="date" id="endDate" required>
 
-      <button type="submit">Send a message</button>
-  </form>
+    <label>Subject</label>
+    <input type="text" id="subject" required>
+
+    <label>Message</label>
+    <textarea id="message" required></textarea>
+
+    <button type="submit">Send a message</button>
+</form>
+
 
   <p id="response"></p>
 </div>
