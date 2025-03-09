@@ -166,7 +166,7 @@
               <input type="email" id="email" required>
   
               <label>Choose a Camper</label>
-              <select id="camper" required onchange="updatePrice()">
+              <select id="camper" required onchange="updatePriceAndDeposit()">
                   <option value="shkodra">"Shkodra" camper</option>
                   <option value="tirana">"Tirana" camper</option>
                   <option value="saranda">"Saranda" camper</option>
@@ -183,6 +183,14 @@
               <p><strong>Duration: </strong><span id="duration">0</span> days</p>
               <p><strong>Total Price: </strong><span id="totalPrice">0</span> $</p>
   
+              <label>Choose Deposit Type</label>
+              <select id="depositType" required onchange="updateDepositAmount()">
+                  <option value="Economic Deposit">Economic Deposit</option>
+                  <option value="Full Deposit">Full Deposit</option>
+              </select>
+  
+              <p><strong>Deposit Amount: </strong><span id="depositAmount">500</span> €</p>
+  
               <label>Subject</label>
               <input type="text" id="subject" required>
   
@@ -195,7 +203,6 @@
           <p id="response"></p>
       </div>
   </section>
-  
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -205,15 +212,30 @@
     // Inicializimi i EmailJS
     emailjs.init("fDszy-jMxzKw_xbo-"); // Vendos USER_ID nga EmailJS
 
-    // Funksioni për të përditësuar çmimin në bazë të camper-it
-    function updatePrice() {
+    // Të dhënat e depozitave për çdo camper
+    const depositData = {
+        "shkodra": { economic: 500, full: 1000, pricePerDay: 100 },
+        "tirana": { economic: 500, full: 1000, pricePerDay: 150 },
+        "saranda": { economic: 500, full: 1000, pricePerDay: 100 }
+    };
+
+    // Përditësimi i çmimit dhe depozitës bazuar në camper-in e zgjedhur
+    function updatePriceAndDeposit() {
         let camper = document.getElementById("camper").value;
-        let pricePerDay = (camper === "tirana") ? 150 : 100; // Tirana = 150, Shkodra/Saranda = 100
-        document.getElementById("dailyPrice").innerText = pricePerDay;
-        calculateTotal();
+        document.getElementById("dailyPrice").innerText = depositData[camper].pricePerDay;
+        updateDepositAmount(); // Përditëso vlerën e depozitës
+        calculateTotal(); // Llogarit çmimin total
     }
 
-    // Funksioni për të llogaritur çmimin total
+    // Përditësimi i shumës së depozitës bazuar në zgjedhjen e përdoruesit
+    function updateDepositAmount() {
+        let camper = document.getElementById("camper").value;
+        let depositType = document.getElementById("depositType").value;
+        let depositAmount = depositType === "Economic Deposit" ? depositData[camper].economic : depositData[camper].full;
+        document.getElementById("depositAmount").innerText = depositAmount;
+    }
+
+    // Llogaritja e çmimit total
     function calculateTotal() {
         let startDate = new Date(document.getElementById("startDate").value);
         let endDate = new Date(document.getElementById("endDate").value);
@@ -226,7 +248,7 @@
         document.getElementById("totalPrice").innerText = totalPrice;
     }
 
-    // Funksioni për dërgimin e emailit përmes EmailJS
+    // Dërgimi i emailit përmes EmailJS
     document.getElementById('bookingForm').addEventListener('submit', function(event) {
         event.preventDefault(); // Parandalon rifreskimin e faqes
 
@@ -240,6 +262,8 @@
             phone: document.getElementById('phone').value,
             email: document.getElementById('email').value,
             camper: document.getElementById('camper').options[document.getElementById('camper').selectedIndex].text,
+            depositType: document.getElementById('depositType').value,
+            depositAmount: document.getElementById('depositAmount').innerText + " €",
             subject: document.getElementById('subject').value,
             message: document.getElementById('message').value,
             duration: document.getElementById('duration').innerText,
