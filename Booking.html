@@ -149,61 +149,53 @@
     </a> 
 
     <!-- Page Title -->
-<section style="padding-top: 80px;">
-<div class="container" >
-  <h2 style="text-align: center; color: orange;">Tirana Campers Albania</h2>
-  <form id="bookingForm">
-    <label>Your Name</label>
-    <input type="text" id="name" required>
-
-    <label>Your Surname</label>
-    <input type="text" id="surname" required>
-
-    <label>Your Phone Number</label>
-    <input type="tel" id="phone" required>
-
-    <label>Your E-mail</label>
-    <input type="email" id="email" required>
-
-    <label>Choose a Camper</label>
-    <select id="camper" required onchange="updatePrice()">
-        <option value="shkodra">"Shkodra" camper</option>
-        <option value="tirana">"Tirana" camper</option>
-        <option value="saranda">"Saranda" camper</option>
-    </select>
-
-    <p><strong>Price per Day: </strong><span id="dailyPrice">100</span> $</p>
-
-    <label>Pick Start Date</label>
-    <input type="date" id="startDate" required onchange="calculateTotal()">
-
-    <label>Pick End Date</label>
-    <input type="date" id="endDate" required onchange="calculateTotal()">
-
-    <p><strong>Duration: </strong><span id="duration">0</span> days</p>
-    <p><strong>Total Price: </strong><span id="totalPrice">0</span> $</p>
-
-    <label>Subject</label>
-    <input type="text" id="subject" required>
-
-    <label>Message</label>
-    <textarea id="message" required></textarea>
-
-    <button type="submit">Send a message</button>
-</form>
-
-<div id="bookingDetails" style="display:none;">
-    <h2>Booking Confirmation</h2>
-    <p id="details"></p>
-</div>
-
-
-  <p id="response"></p>
-</div>
-    <!-- Starter Section Section -->
-    
-
+    <section style="padding-top: 80px;">
+      <div class="container">
+          <h2 style="text-align: center; color: orange;">Tirana Campers Albania</h2>
+          <form id="bookingForm">
+              <label>Your Name</label>
+              <input type="text" id="name" required>
+  
+              <label>Your Surname</label>
+              <input type="text" id="surname" required>
+  
+              <label>Your Phone Number</label>
+              <input type="tel" id="phone" required>
+  
+              <label>Your E-mail</label>
+              <input type="email" id="email" required>
+  
+              <label>Choose a Camper</label>
+              <select id="camper" required onchange="updatePrice()">
+                  <option value="shkodra">"Shkodra" camper</option>
+                  <option value="tirana">"Tirana" camper</option>
+                  <option value="saranda">"Saranda" camper</option>
+              </select>
+  
+              <p><strong>Price per Day: </strong><span id="dailyPrice">100</span> $</p>
+  
+              <label>Pick Start Date</label>
+              <input type="date" id="startDate" required onchange="calculateTotal()">
+  
+              <label>Pick End Date</label>
+              <input type="date" id="endDate" required onchange="calculateTotal()">
+  
+              <p><strong>Duration: </strong><span id="duration">0</span> days</p>
+              <p><strong>Total Price: </strong><span id="totalPrice">0</span> $</p>
+  
+              <label>Subject</label>
+              <input type="text" id="subject" required>
+  
+              <label>Message</label>
+              <textarea id="message" required></textarea>
+  
+              <button type="submit">Send a message</button>
+          </form>
+  
+          <p id="response"></p>
+      </div>
   </section>
+  
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -213,64 +205,59 @@
     // Inicializimi i EmailJS
     emailjs.init("fDszy-jMxzKw_xbo-"); // Vendos USER_ID nga EmailJS
 
-    // Depozitat për çdo kamper
-    const depositData = {
-        "shkodra": { economic: 500, deposit: 1000 },
-        "tirana": { economic: 600, deposit: 1200 },
-        "saranda": { economic: 450, deposit: 900 }
-    };
+    // Funksioni për të përditësuar çmimin në bazë të camper-it
+    function updatePrice() {
+        let camper = document.getElementById("camper").value;
+        let pricePerDay = (camper === "tirana") ? 150 : 100; // Tirana = 150, Shkodra/Saranda = 100
+        document.getElementById("dailyPrice").innerText = pricePerDay;
+        calculateTotal();
+    }
 
-    // Ndryshimi i depozitave në bazë të zgjedhjes së kamperit
-    document.getElementById('camper').addEventListener('change', function() {
-        const selected = this.value;
-        document.getElementById('economicDeposit').textContent = depositData[selected].economic;
-        document.getElementById('deposit').textContent = depositData[selected].deposit;
-    });
+    // Funksioni për të llogaritur çmimin total
+    function calculateTotal() {
+        let startDate = new Date(document.getElementById("startDate").value);
+        let endDate = new Date(document.getElementById("endDate").value);
+        let timeDiff = endDate - startDate;
+        let days = timeDiff > 0 ? Math.ceil(timeDiff / (1000 * 60 * 60 * 24)) : 0;
 
-    // Dërgimi i emailit me EmailJS
+        document.getElementById("duration").innerText = days;
+        let pricePerDay = parseInt(document.getElementById("dailyPrice").innerText);
+        let totalPrice = days * pricePerDay;
+        document.getElementById("totalPrice").innerText = totalPrice;
+    }
+
+    // Funksioni për dërgimin e emailit përmes EmailJS
     document.getElementById('bookingForm').addEventListener('submit', function(event) {
-        event.preventDefault();
+        event.preventDefault(); // Parandalon rifreskimin e faqes
 
-        const depositType = document.getElementById('depositType').value;
-        let depositAmount = "";
+        // Llogarit shumën totale për rezervimin
+        calculateTotal();
 
-        // Cakto shumën bazuar në zgjedhjen e përdoruesit
-        if (depositType === "Economic Deposit") {
-            depositAmount = document.getElementById('economicDeposit').textContent;
-        } else {
-            depositAmount = document.getElementById('deposit').textContent;
-        }
-
-        // Llogaritja e ditëve dhe çmimit total
-        const startDate = new Date(document.getElementById('startDate').value);
-        const endDate = new Date(document.getElementById('endDate').value);
-        const timeDiff = endDate - startDate;
-        const dayDiff = timeDiff / (1000 * 3600 * 24); // Llogaritja e ditëve
-        const totalPrice = dayDiff * 100; // Çmimi total 100$ për ditë
-
+        // Merr të dhënat nga forma
         const formData = {
             name: document.getElementById('name').value,
+            surname: document.getElementById('surname').value,
+            phone: document.getElementById('phone').value,
             email: document.getElementById('email').value,
             camper: document.getElementById('camper').options[document.getElementById('camper').selectedIndex].text,
-            depositType: depositType,  // Tregon në email nëse është "Economic Deposit" ose "Full Deposit"
-            depositAmount: depositAmount + " €",
             subject: document.getElementById('subject').value,
             message: document.getElementById('message').value,
-            duration: dayDiff, // Dita e qëndrimit
-            totalPrice: totalPrice // Çmimi total
+            duration: document.getElementById('duration').innerText,
+            totalPrice: document.getElementById('totalPrice').innerText + " $"
         };
 
-        // Përdorimi i EmailJS për të dërguar emailin
+        // Dërgon emailin përmes EmailJS
         emailjs.send("service_4wzaofc", "template_v51txgk", formData)
         .then(function(response) {
-            document.getElementById('response').innerText = "Email Sent Successfully!";
+            document.getElementById('response').innerText = "✅ Email Sent Successfully!";
+            document.getElementById('response').style.color = "green";
+            document.getElementById('bookingForm').reset(); // Pasi dërgohet, fshin të dhënat në formë
         }, function(error) {
-            document.getElementById('response').innerText = "Error Sending Email!";
+            document.getElementById('response').innerText = "❌ Error Sending Email!";
+            document.getElementById('response').style.color = "red";
         });
     });
 </script>
-
-
 <!-- <script>
   const form = document.getElementById('bookingForm');
   const startDateInput = document.getElementById('startDate');
@@ -328,7 +315,7 @@ ${messageInput.value}
 </script> -->
   <!-- Vendor JS Files -->
   
-<script>
+<!-- <script>
   function updatePrice() {
       let camper = document.getElementById("camper").value;
       let pricePerDay = (camper === "tirana") ? 150 : 100; // Tirana = 150, Shkodra/Saranda = 100
@@ -347,7 +334,8 @@ ${messageInput.value}
       let totalPrice = days * pricePerDay;
       document.getElementById("totalPrice").innerText = totalPrice;
   }
-  </script>
+  </script> -->
+  
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
