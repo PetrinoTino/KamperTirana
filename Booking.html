@@ -160,7 +160,8 @@
               <input type="text" id="surname" required>
   
               <label>Your Phone Number</label>
-              <input type="tel" id="phone" required>
+              <input type="tel" id="phone" required pattern="[0-9]{9,20}" inputmode="numeric" maxlength="20">
+             
   
               <label>Your E-mail</label>
               <input type="email" id="email" required>
@@ -172,7 +173,7 @@
                   <option value="saranda">"Saranda" camper</option>
               </select>
   
-              <p><strong>Price per Day: </strong><span id="dailyPrice">100</span> $</p>
+              <p><strong>Price per Day: $</strong><span id="dailyPrice">100</span> </p>
   
               <label>Pick Start Date</label>
               <input type="date" id="startDate" required onchange="calculateTotal()">
@@ -181,7 +182,7 @@
               <input type="date" id="endDate" required onchange="calculateTotal()">
   
               <p><strong>Duration: </strong><span id="duration">0</span> days</p>
-              <p><strong>Total Price: </strong><span id="totalPrice">0</span> $</p>
+              <p><strong>Total Price: $</strong><span id="totalPrice">0</span> </p>
   
               <label>Choose Deposit Type</label>
               <select id="depositType" required onchange="updateDepositAmount()">
@@ -189,7 +190,7 @@
                   <option value="Full Deposit">Full Deposit</option>
               </select>
   
-              <p><strong>Deposit Amount: </strong><span id="depositAmount">500</span> €</p>
+              <p><strong>Deposit Amount: $</strong><span id="depositAmount">500</span> </p>
   
               <label>Subject</label>
               <input type="text" id="subject" required>
@@ -281,6 +282,11 @@
             document.getElementById('response').style.color = "red";
         });
     });
+</script>
+<script>
+  document.getElementById("phone").addEventListener("input", function (event) {
+      this.value = this.value.replace(/\D/g, ""); // Heq çdo karakter që nuk është numër
+  });
 </script>
 <!-- <script>
   const form = document.getElementById('bookingForm');
