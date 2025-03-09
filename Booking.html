@@ -166,26 +166,22 @@
     <input type="email" id="email" required>
 
     <label>Choose a Camper</label>
-    <select id="camper" required>
+    <select id="camper" required onchange="updatePrice()">
         <option value="shkodra">"Shkodra" camper</option>
         <option value="tirana">"Tirana" camper</option>
         <option value="saranda">"Saranda" camper</option>
     </select>
 
-    <p><strong>Economic Deposit: </strong><span id="economicDeposit">500</span> €</p>
-    <p><strong>Deposit: </strong><span id="deposit">1000</span> €</p>
-
-    <label>Choose Deposit Type</label>
-    <select id="depositType" required>
-        <option value="Economic Deposit">Economic Deposit</option>
-        <option value="Full Deposit">Full Deposit</option>
-    </select>
+    <p><strong>Price per Day: </strong><span id="dailyPrice">100</span> $</p>
 
     <label>Pick Start Date</label>
-    <input type="date" id="startDate" required>
+    <input type="date" id="startDate" required onchange="calculateTotal()">
 
     <label>Pick End Date</label>
-    <input type="date" id="endDate" required>
+    <input type="date" id="endDate" required onchange="calculateTotal()">
+
+    <p><strong>Duration: </strong><span id="duration">0</span> days</p>
+    <p><strong>Total Price: </strong><span id="totalPrice">0</span> $</p>
 
     <label>Subject</label>
     <input type="text" id="subject" required>
@@ -331,6 +327,27 @@ ${messageInput.value}
   });
 </script> -->
   <!-- Vendor JS Files -->
+  
+<script>
+  function updatePrice() {
+      let camper = document.getElementById("camper").value;
+      let pricePerDay = (camper === "tirana") ? 150 : 100; // Tirana = 150, Shkodra/Saranda = 100
+      document.getElementById("dailyPrice").innerText = pricePerDay;
+      calculateTotal();
+  }
+  
+  function calculateTotal() {
+      let startDate = new Date(document.getElementById("startDate").value);
+      let endDate = new Date(document.getElementById("endDate").value);
+      let timeDiff = endDate - startDate;
+      let days = timeDiff > 0 ? Math.ceil(timeDiff / (1000 * 60 * 60 * 24)) : 0;
+  
+      document.getElementById("duration").innerText = days;
+      let pricePerDay = parseInt(document.getElementById("dailyPrice").innerText);
+      let totalPrice = days * pricePerDay;
+      document.getElementById("totalPrice").innerText = totalPrice;
+  }
+  </script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
