@@ -154,10 +154,10 @@
           <h2 style="text-align: center; color: orange;">Tirana Campers Albania</h2>
           <form id="bookingForm">
               <label>Your Name</label>
-              <input type="text" id="name" required>
+              <input type="text" id="name" required pattern="[A-Za-z\s]+" title="Only letters and spaces allowed" >
   
               <label>Your Surname</label>
-              <input type="text" id="surname" required>
+              <input type="text" id="surname" required pattern="[A-Za-z\s]+" title="Only letters and spaces allowed">
   
               <label>Your Phone Number</label>
               <input type="tel" id="phone" required pattern="[0-9]{9,20}" inputmode="numeric" maxlength="20">
@@ -287,6 +287,25 @@
   document.getElementById("phone").addEventListener("input", function (event) {
       this.value = this.value.replace(/\D/g, ""); // Heq çdo karakter që nuk është numër
   });
+</script>
+
+
+
+
+<script>
+  
+    function validateTextInput(input) {
+        input.value = input.value.replace(/[^A-Za-z\s]/g, ""); // Lejon vetëm shkronja dhe hapësira
+    }
+
+    document.getElementById("name").addEventListener("input", function () {
+        validateTextInput(this);
+    });
+
+    document.getElementById("surname").addEventListener("input", function () {
+        validateTextInput(this);
+    });
+
 </script>
 <!-- <script>
   const form = document.getElementById('bookingForm');
