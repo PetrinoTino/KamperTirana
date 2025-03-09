@@ -47,14 +47,26 @@
     z-index: 9999; /* Siguron që të jetë mbi elementët e tjerë */
     pointer-events: auto; /* Siguron që të jetë gjithmonë klikueshëm */
 }
+@media screen and (max-width: 768px) {
+    .whatsapp-float {
+        right: 50px; /* Pozita më e afërt për pajisjet më të vogla */
+        bottom: 10px; /* Pozita më afër poshtë */
+        width: 45px;
+        height: 45px;
+        font-size: 24px; /* Përshtat madhësinë e shkrimit për ekrane më të vogla */
+    }
+}
+
+/* Përshtatje për ekrane më të vogla, si telefonat mobil (për shembull 480px dhe më poshtë) */
 @media screen and (max-width: 480px) {
     .whatsapp-float {
         right: 60px;
-        bottom: 14px;
-        width: 45px;
-        height: 45px;
-        font-size: 26px;
-    }}
+        bottom: 12px;
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
+    }
+}
 </style>
 </head>
 
