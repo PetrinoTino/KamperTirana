@@ -17,8 +17,10 @@
 
 
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=language" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=my_location" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=language" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=my_location" />
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
@@ -38,258 +40,271 @@
 
 
   <style>
- .whatsapp-float {
-    position: fixed;
-    bottom: 10px;
-    right: 70px;
-    background-color: #25d366;
-    color: white;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    text-decoration: none;
-    z-index: 9999; /* Siguron që të jetë mbi elementët e tjerë */
-    pointer-events: auto; /* Siguron që të jetë gjithmonë klikueshëm */
-}
-@media screen and (max-width: 768px) {
     .whatsapp-float {
-        right: 50px; /* Pozita më e afërt për pajisjet më të vogla */
-        bottom: 10px; /* Pozita më afër poshtë */
+      position: fixed;
+      bottom: 10px;
+      right: 70px;
+      background-color: #25d366;
+      color: white;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      text-decoration: none;
+      z-index: 9999;
+      /* Siguron që të jetë mbi elementët e tjerë */
+      pointer-events: auto;
+      /* Siguron që të jetë gjithmonë klikueshëm */
+    }
+
+    @media screen and (max-width: 768px) {
+      .whatsapp-float {
+        right: 50px;
+        /* Pozita më e afërt për pajisjet më të vogla */
+        bottom: 10px;
+        /* Pozita më afër poshtë */
         width: 45px;
         height: 45px;
-        font-size: 24px; /* Përshtat madhësinë e shkrimit për ekrane më të vogla */
+        font-size: 24px;
+        /* Përshtat madhësinë e shkrimit për ekrane më të vogla */
+      }
     }
-}
 
-/* Përshtatje për ekrane më të vogla, si telefonat mobil (për shembull 480px dhe më poshtë) */
-@media screen and (max-width: 480px) {
-    .whatsapp-float {
+    /* Përshtatje për ekrane më të vogla, si telefonat mobil (për shembull 480px dhe më poshtë) */
+    @media screen and (max-width: 480px) {
+      .whatsapp-float {
         right: 60px;
         bottom: 12px;
         width: 40px;
         height: 40px;
         font-size: 22px;
+      }
     }
-}
-      .animated-image {
-        max-width: 100%;
-        height: auto;
-        width: 600px;
-        transition: transform 0.8s ease-in-out;
+
+    .animated-image {
+      max-width: 100%;
+      height: auto;
+      width: 600px;
+      transition: transform 0.8s ease-in-out;
     }
 
     .hero-image:hover .animated-image {
-        transform: scale(1.1) translateX(20px);
+      transform: scale(1.1) translateX(20px);
     }
+
     .icon-details {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* 2 kolona */
-        gap: 15px; /* Hapësira mes ikonave */
-        justify-content: center;
-        margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      /* 2 kolona */
+      gap: 15px;
+      /* Hapësira mes ikonave */
+      justify-content: center;
+      margin-top: 20px;
     }
 
     .icon-item {
-        display: flex;
-        align-items: center;
-        gap: 8px; /* Hapësira mes ikonës dhe tekstit */
-        font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      /* Hapësira mes ikonës dhe tekstit */
+      font-size: 1.2rem;
     }
-  /* Përcaktimi i animacionit për shfaqjen e elementeve */
-  
-  
-  .slide-in {
-    animation: slideIn 1s ease-in-out forwards;
-  }
 
-  /* Krijimi i animacionit të 'slide' */
-  @keyframes slideIn {
-    from {
-      transform: translateX(100%);
-      opacity: 0;
+    /* Përcaktimi i animacionit për shfaqjen e elementeve */
+
+
+    .slide-in {
+      animation: slideIn 1s ease-in-out forwards;
     }
-    to {
-      transform: translateX(0);
-      opacity: 1;
+
+    /* Krijimi i animacionit të 'slide' */
+    @keyframes slideIn {
+      from {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
     }
-  }
 
-  .hidden {
-    display: none;
-  }
+    .hidden {
+      display: none;
+    }
 
-  /* Fsheh div-in në fillim */
- 
+    /* Fsheh div-in në fillim */
+
 
 
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
     .hero-content {
-        text-align: left;
-        padding: 20px;
+      text-align: left;
+      padding: 20px;
     }
 
     .hero-title {
-        font-size: 3.2rem;
-        font-weight: 700;
-        color: #352b23; /* Ngjyrë e butë kafe */
-        font-family:Georgia, 'Times New Roman', Times, serif
+      font-size: 3.2rem;
+      font-weight: 700;
+      color: #352b23;
+      /* Ngjyrë e butë kafe */
+      font-family: Georgia, 'Times New Roman', Times, serif
     }
 
     .hero-text {
-        font-size: 1.7rem;
-        font-weight: 500;
-        color: #774949; /* E zezë e lehtë për sy */
-        font-family: 'Poppins', sans-serif;
-        margin-top: 10px;
-        line-height: 1.4;
+      font-size: 1.7rem;
+      font-weight: 500;
+      color: #774949;
+      /* E zezë e lehtë për sy */
+      font-family: 'Poppins', sans-serif;
+      margin-top: 10px;
+      line-height: 1.4;
     }
 
     @media screen and (max-width: 414px) {
-  .hero-section {
-    height: auto;
-    padding: 20px 0;
-    text-align: center;
-  }
+      .hero-section {
+        height: auto;
+        padding: 20px 0;
+        text-align: center;
+      }
 
-  .row {
-    flex-direction: column;
-    align-items: center;
-  }
+      .row {
+        flex-direction: column;
+        align-items: center;
+      }
 
-  .hero-content {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 20px;
-  }
+      .hero-content {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+      }
 
-  .hero-title {
-    font-size: 1.8rem;
-  }
+      .hero-title {
+        font-size: 1.8rem;
+      }
 
-  .hero-text {
-    font-size: 1rem;
-  }
+      .hero-text {
+        font-size: 1rem;
+      }
 
-  .hero-image {
-    width: 100%;
-    margin-bottom: 20px;
-  }
+      .hero-image {
+        width: 100%;
+        margin-bottom: 20px;
+      }
 
-  .hero-image img {
-    max-width: 80%;
-    height: auto;
-  }
+      .hero-image img {
+        max-width: 80%;
+        height: auto;
+      }
 
-  .icon-details {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
+      .icon-details {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
 
-  .icon-item {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
+      .icon-item {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
 
-  .icon-item img {
-    width: 30px;
-  }
+      .icon-item img {
+        width: 30px;
+      }
 
-  .icon-item span {
-    font-size: 0.9rem;
-  }
-}
+      .icon-item span {
+        font-size: 0.9rem;
+      }
+    }
 
-@media (max-width: 1024px) and (orientation: landscape) {
-  .hero-section {
-    flex-direction: column;
-    text-align: center;
-    height: auto;
-    padding: 20px 0;
-  }
+    @media (max-width: 1024px) and (orientation: landscape) {
+      .hero-section {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding: 20px 0;
+      }
 
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
 
-  .hero-content {
-    order: 1;
-    max-width: 90%;
-    text-align: center;
-  }
+      .hero-content {
+        order: 1;
+        max-width: 90%;
+        text-align: center;
+      }
 
-  .hero-title {
-    font-size: 24px;
-  }
+      .hero-title {
+        font-size: 24px;
+      }
 
-  .hero-text {
-    font-size: 18px;
-  }
+      .hero-text {
+        font-size: 18px;
+      }
 
-  .hero-image {
-    order: 2;
-    max-width: 70%;
-    margin-top: 20px;
-  }
+      .hero-image {
+        order: 2;
+        max-width: 70%;
+        margin-top: 20px;
+      }
 
-  .hero-image img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-  }
+      .hero-image img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+      }
 
-  .icon-details {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 10px;
-  }
+      .icon-details {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 10px;
+      }
 
-  .icon-item {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
+      .icon-item {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
 
-  .icon-item img {
-    width: 30px;
-    height: auto;
-  }
+      .icon-item img {
+        width: 30px;
+        height: auto;
+      }
 
-  .icon-item span {
-    font-size: 14px;
-  }
-}
-
-
+      .icon-item span {
+        font-size: 14px;
+      }
+    }
   </style>
 </head>
 
 <body class="index-page">
 
   <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid position-relative d-flex align-items-center justify-content-between" >
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="./Tirana-campers-albania-logo-250.png" alt="" >
+        <img src="./Tirana-campers-albania-logo-250.png" alt="">
         <h1 class="sitename"> Tirana Campers Albania </h1>
       </a>
 
-      <nav id="navmenu" class="navmenu" >
-        <ul >
+      <nav id="navmenu" class="navmenu">
+        <ul>
           <li><a href="index.html#hero" class="active">Home</a></li>
           <li><a href="index.html#services">About us</a></li>
           <li><a href="services-details.html">Services</a></li>
@@ -297,7 +312,7 @@
           <li><a href="index.html#pricing">Pricing</a></li>
           <!-- <li><a href="starter-page.html">Team</a></li> -->
 
-      
+
           <li><a href="index.html#contact">Contact</a></li>
           <a class="btn-getstarted" href="Booking.html">Book Now</a>
         </ul>
@@ -313,67 +328,81 @@
 
     <!-- Hero Section -->
 
-    <section id="hero" class="hero-section dark-bg" style="width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(to bottom, #ffffff, #d3d3d3); color: #fff;">
+    <section id="hero" class="hero-section dark-bg"
+      style="width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(to bottom, #ffffff, #d3d3d3); color: #fff;">
 
-    
+
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6 hero-content">
-            <h2 class="hero-title" data-aos="fade-up" data-aos-delay="100" > Tirana Campers Albania </h2>
-            
-            <p class="hero-text" data-aos="fade-up" data-aos-delay="300">
-                <strong>3 Campers:</strong> <br> 
-                Tirana, Shkodra & Saranda 
-            </p>
-            
-        
-        </div>
-        <div class="col-lg-6 hero-image" id="image-1" data-aos="fade-left" data-aos-delay="600" style="text-align: center;">
-          <img id="car-image-1" src="./volkswagen.png" alt="Kamper Tirana Volkswagen" class="img-fluid animated-image">
-          
-          <div class="icon-details">
-              <div class="icon-item">
-                  <img src="/icons8-turbo-50.png" width="40px" alt=""> <span id="engine-1" style="color: black;">2500cc</span>
-              </div>
-              <div class="icon-item">
-                  <img src="/icons8-gas-station-24.png" width="40px" alt=""> <span id="fuel-consumption-1" style="color: black;">8-9/100km</span>
-              </div>
-              <div class="icon-item">
-                  <img src="/icons8-clutch-pedal-48.png" width="40px" alt=""> <span id="transmission-1" style="color: black;">Manual</span>
-              </div>
-              <div class="icon-item">
-                  <img src="/icons8-speed-meter-50.png" width="40px" alt=""> <span id="status-1" style="color: black;">ON</span>
-              </div>
-          </div>
-        </div>
-        
-        <div class="col-lg-6 hero-image" id="image-2" data-aos="fade-left" data-aos-delay="600" style="text-align: center;">
-          <img id="car-image-2" src="./ducat.png" alt="Kamper Tirana Audi" class="img-fluid animated-image">
-          
-          <div class="icon-details">
-              <div class="icon-item">
-                  <img src="/icons8-turbo-50.png" width="40px" alt=""> <span id="engine-2" style="color: black;">1900cc</span>
-              </div>
-              <div class="icon-item">
-                  <img src="/icons8-gas-station-24.png" width="40px" alt=""> <span id="fuel-consumption-2" style="color: black;">8-9/100km</span>
-              </div>
-              <div class="icon-item">
-                  <img src="/icons8-clutch-pedal-48.png" width="40px" alt=""> <span id="transmission-2" style="color: black;">Manual</span>
-              </div>
-              <div class="icon-item">
-                  <img src="/icons8-speed-meter-50.png" width="40px" alt=""> <span id="status-2" style="color: black;">ON</span>
-              </div>
-          </div>
-        </div>
-    </div>
-    
-    
-    
+            <h2 class="hero-title" data-aos="fade-up" data-aos-delay="100"> Tirana Campers Albania </h2>
 
-    <a href="https://wa.me/355684111124?text=Pershendetje,%20dua%20te%20marr%20me%20qira%20nje%20kamper!" class="whatsapp-float" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 50px; height: 50px;">
-    </a>
-    
+            <p class="hero-text" data-aos="fade-up" data-aos-delay="300">
+              <strong>3 Campers:</strong> <br>
+              Tirana, Shkodra & Saranda
+            </p>
+
+
+          </div>
+          <div class="col-lg-6 hero-image" id="image-1" data-aos="fade-left" data-aos-delay="600"
+            style="text-align: center;">
+            <img id="car-image-1" src="./volkswagen.png" alt="Kamper Tirana Volkswagen"
+              class="img-fluid animated-image">
+
+            <div class="icon-details">
+              <div class="icon-item">
+                <img src="/icons8-turbo-50.png" width="40px" alt=""> <span id="engine-1"
+                  style="color: black;">2500cc</span>
+              </div>
+              <div class="icon-item">
+                <img src="/icons8-gas-station-24.png" width="40px" alt=""> <span id="fuel-consumption-1"
+                  style="color: black;">8-9/100km</span>
+              </div>
+              <div class="icon-item">
+                <img src="/icons8-clutch-pedal-48.png" width="40px" alt=""> <span id="transmission-1"
+                  style="color: black;">Manual</span>
+              </div>
+              <div class="icon-item">
+                <img src="/icons8-speed-meter-50.png" width="40px" alt=""> <span id="status-1"
+                  style="color: black;">ON</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 hero-image" id="image-2" data-aos="fade-left" data-aos-delay="600"
+            style="text-align: center;">
+            <img id="car-image-2" src="./ducat.png" alt="Kamper Tirana Audi" class="img-fluid animated-image">
+
+            <div class="icon-details">
+              <div class="icon-item">
+                <img src="/icons8-turbo-50.png" width="40px" alt=""> <span id="engine-2"
+                  style="color: black;">1900cc</span>
+              </div>
+              <div class="icon-item">
+                <img src="/icons8-gas-station-24.png" width="40px" alt=""> <span id="fuel-consumption-2"
+                  style="color: black;">8-9/100km</span>
+              </div>
+              <div class="icon-item">
+                <img src="/icons8-clutch-pedal-48.png" width="40px" alt=""> <span id="transmission-2"
+                  style="color: black;">Manual</span>
+              </div>
+              <div class="icon-item">
+                <img src="/icons8-speed-meter-50.png" width="40px" alt=""> <span id="status-2"
+                  style="color: black;">ON</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <a href="https://wa.me/355684111124?text=Pershendetje,%20dua%20te%20marr%20me%20qira%20nje%20kamper!"
+          class="whatsapp-float" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"
+            style="width: 50px; height: 50px;">
+        </a>
+
 
 
     </section><!-- /Hero Section -->
@@ -424,13 +453,14 @@
 
           <div class="col-xl-5 content">
             <h3 style="font-size: 40px;">Services</h3>
-            
 
-        
+
+
             <h2><strong>What Sets Us Apart: </strong></h2>
 
 
-            <a href="services-details.html" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+            <a href="services-details.html" class="read-more"><span>Read More</span><i
+                class="bi bi-arrow-right"></i></a>
           </div>
 
           <div class="col-xl-7">
@@ -439,8 +469,9 @@
               <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
                 <div class="icon-box">
                   <i class="bi bi-buildings"></i>
-                  
-                  <p><strong>Quality and Safety: </strong>We maintain a fleet of well-maintained campers, ensuring each vehicle meets high standards of
+
+                  <p><strong>Quality and Safety: </strong>We maintain a fleet of well-maintained campers, ensuring each
+                    vehicle meets high standards of
                     safety and reliability.</p>
                 </div>
               </div> <!-- End Icon Box -->
@@ -449,9 +480,11 @@
                 <div class="icon-box">
                   <i class="bi bi-clipboard-pulse"></i>
                   <!-- <h3>Rerum aperiam</h3> -->
-                  <p> 
-                    <strong>We</strong> believe in transparent pricing and clear rental terms, ensuring our customers can plan and
-                    budget confidently.</p>
+                  <p>
+                    <strong>We</strong> believe in transparent pricing and clear rental terms, ensuring our customers
+                    can plan and
+                    budget confidently.
+                  </p>
                 </div>
               </div> <!-- End Icon Box -->
 
@@ -459,7 +492,8 @@
                 <div class="icon-box">
                   <i class="bi bi-command"></i>
                   <!-- <h3>Veniam omnis</h3> -->
-                  <p><strong>We</strong> promote sustainable travel practices and minimize our environmental footprint wherever possible.
+                  <p><strong>We</strong> promote sustainable travel practices and minimize our environmental footprint
+                    wherever possible.
                   </p>
                 </div>
               </div> <!-- End Icon Box -->
@@ -468,7 +502,8 @@
                 <div class="icon-box">
                   <i class="bi bi-graph-up-arrow"></i>
                   <!-- <h3>Delares sapiente</h3> -->
-                  <p><strong>Our</strong> dedicated team is committed to providing personalized service, from helping you choose the
+                  <p><strong>Our</strong> dedicated team is committed to providing personalized service, from helping
+                    you choose the
                     right camper to offering support throughout your journey.</p>
                 </div>
               </div> <!-- End Icon Box -->
@@ -490,27 +525,33 @@
 
         <div class="row gy-4">
           <div class="col-lg-4 col-md-6">
-            <div class="stats-item text-center w-100 h-100" style="background: #ffffff15; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
-              
+            <div class="stats-item text-center w-100 h-100"
+              style="background: #ffffff15; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+
               <h3 style="color: orange; margin-bottom: 10px;">
-                
+
                 Pricing and No Hidden Fees</h3>
-                
-              <p style="color: #d4d4d4; font-size: 1rem;">Our pricing is clear and straightforward, with no hidden fees. What you see is what you get.</p>
+
+              <p style="color: #d4d4d4; font-size: 1rem;">Our pricing is clear and straightforward, with no hidden fees.
+                What you see is what you get.</p>
             </div>
           </div><!-- End Stats Item -->
-      
+
           <div class="col-lg-4 col-md-6">
-            <div class="stats-item text-center w-100 h-100" style="background: #ffffff26; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+            <div class="stats-item text-center w-100 h-100"
+              style="background: #ffffff26; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
               <h3 style="color: orange; margin-bottom: 10px;">Knowledge & Suggestions</h3>
-              <p style="color: #d4d4d4; font-size: 1rem;">As outdoor enthusiasts ourselves, we provide insider tips, destination recommendations, and local insights to help you make the most of your adventure.</p>
+              <p style="color: #d4d4d4; font-size: 1rem;">As outdoor enthusiasts ourselves, we provide insider tips,
+                destination recommendations, and local insights to help you make the most of your adventure.</p>
             </div>
           </div><!-- End Stats Item -->
-      
+
           <div class="col-lg-4 col-md-6">
-            <div class="stats-item text-center w-100 h-100" style="background: #ffffff1b; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+            <div class="stats-item text-center w-100 h-100"
+              style="background: #ffffff1b; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
               <h3 style="color: orange; margin-bottom: 10px;">Easy Booking Process</h3>
-              <p style="color: #d4d4d4; font-size: 1rem;">Our user-friendly website makes it effortless to browse, select, and secure your preferred camper.</p>
+              <p style="color: #d4d4d4; font-size: 1rem;">Our user-friendly website makes it effortless to browse,
+                select, and secure your preferred camper.</p>
             </div>
           </div><!-- End Stats Item -->
 
@@ -603,15 +644,16 @@
             <div class="service-item d-flex">
               <div class="icon flex-shrink-0"><i class="bi bi-brightness-high"></i></div>
               <div>
-                <h4 class="title"><a href="services-details.html" class="stretched-link">Best camper experience of your life</a></h4>
-             
-            <p>Welcome to Tirana Campers Albania, your premier destination for camper rentals and outdoor Albanian
-              adventures! At Tirana Campers Albania, we believe in turning your travel
-              dreams into reality by offering top-quality campers for rent, suited to every adventurer's needs.</p>
+                <h4 class="title"><a href="services-details.html" class="stretched-link">Best camper experience of your
+                    life</a></h4>
+
+                <p>Welcome to Tirana Campers Albania, your premier destination for camper rentals and outdoor Albanian
+                  adventures! At Tirana Campers Albania, we believe in turning your travel
+                  dreams into reality by offering top-quality campers for rent, suited to every adventurer's needs.</p>
               </div>
             </div>
           </div><!-- End Service Item -->
-<!-- 
+          <!-- 
           <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="500">
             <div class="service-item d-flex">
               <div class="icon flex-shrink-0"><i class="bi bi-brightness-high"></i></div>
@@ -669,18 +711,21 @@
                 <span>
 
                   Consumption: 8-9 liters
-                </span></li>
+                </span>
+              </li>
               <li><i class="bi bi-check text-success"></i>
-                <span> External shower 40 liters.</span></li>
+                <span> External shower 40 liters.</span>
+              </li>
               <li><i class="bi bi-check text-success"></i>
-              </i> <span> Conditioner</span>.</li>
+                </i> <span> Conditioner</span>.</li>
 
               <li><i class="bi bi-check text-success"></i><span> Sink with 10 liters of water</span></li>
               <li><i class="bi bi-check text-success"></i> <span> Refrigerator</span>.</li>
 
               <li><i class="bi bi-check text-success"></i><span> Portable WC</span></li>
               <li><i class="bi bi-check text-success"></i> <span> Sun tent</span>.</li>
-              <li><i class="bi bi-check text-success"></i><span> 2 batteries for internal lighting and water pumps</span></li>
+              <li><i class="bi bi-check text-success"></i><span> 2 batteries for internal lighting and water
+                  pumps</span></li>
               <li><i class="bi bi-check text-success"></i> <span>
                   Refrigerator and gas cooking</span>.</li>
               <li><i class="bi bi-check text-success"></i> <span> Economic Deposit 500,00 €</span>.</li>
@@ -688,8 +733,8 @@
             </ul>
             <div class="d-flex justify-content-center">
               <a href="Booking.html" class="btn btn-get-started">Get Started</a>
+            </div>
           </div>
-                    </div>
           <div class="col-lg-7 order-1 order-lg-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
             <div class="image-stack">
               <img src="./Volkswagen.jpg" alt="" class="stack-front">
@@ -719,15 +764,16 @@
 
               <li><i class="bi bi-check text-success"></i><span> Portable WC</span></li>
               <li><i class="bi bi-check text-success"></i> <span> Sun tent</span>.</li>
-              <li><i class="bi bi-check text-success"></i><span> 2 batteries for internal lighting and water pumps</span></li>
+              <li><i class="bi bi-check text-success"></i><span> 2 batteries for internal lighting and water
+                  pumps</span></li>
               <li><i class="bi bi-check text-success"></i> <span>
                   Refrigerator and gas cooking</span>.</li>
               <li><i class="bi bi-check text-success"></i> <span> Economic Deposit 1000,00 €</span>.</li>
             </ul>
             <div class="d-flex justify-content-center">
               <a href="Booking.html" class="btn btn-get-started">Get Started</a>
+            </div>
           </div>
-                    </div>
         </div><!-- Features Item -->
         <div class="row gy-4 align-items-stretch justify-content-between features-item ">
           <div class="col-lg-6 d-flex align-items-center features-img-bg" data-aos="zoom-out">
@@ -756,7 +802,8 @@
 
               <li><i class="bi bi-check text-success"></i><span> Portable WC</span></li>
               <li><i class="bi bi-check text-success"></i> <span> Sun tent</span>.</li>
-              <li><i class="bi bi-check text-success"></i><span> 2 batteries for internal lighting and water pumps</span></li>
+              <li><i class="bi bi-check text-success"></i><span> 2 batteries for internal lighting and water
+                  pumps</span></li>
               <li><i class="bi bi-check text-success"></i> <span>
                   Refrigerator and gas cooking</span>.</li>
               <li><i class="bi bi-check text-success"></i> <span> Economic Deposit 500,00 €</span>.</li>
@@ -764,8 +811,8 @@
             </ul>
             <div class="d-flex justify-content-center">
               <a href="Booking.html" class="btn btn-get-started">Get Started</a>
+            </div>
           </div>
-                    </div>
         </div><!-- Features Item -->
 
       </div>
@@ -798,8 +845,8 @@
               <img src="./assets/img/fiat/f1.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Tirana Campers Albania</h4>
-                <a href="./assets/img/fiat/f1.jpg" 
-                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="./assets/img/fiat/f1.jpg" data-gallery="portfolio-gallery-app"
+                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 <a href="https://www.instagram.com/tiranacampersalbania/" title="More Details" class="details-link"><i
                     class="bi bi-link-45deg"></i></a>
               </div>
@@ -809,9 +856,8 @@
               <img src="./assets/img/fiat/f2.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Tirana Campers Albania</h4>
-                <a href="./assets/img/fiat/f2.jpg" 
-                  data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                    class="bi bi-zoom-in"></i></a>
+                <a href="./assets/img/fiat/f2.jpg" data-gallery="portfolio-gallery-product"
+                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 <a href="https://www.instagram.com/tiranacampersalbania/" title="More Details" class="details-link"><i
                     class="bi bi-link-45deg"></i></a>
               </div>
@@ -821,9 +867,8 @@
               <img src="./assets/img/fiat/f3.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Tirana Campers Albania</h4>
-                <a href="./assets/img/fiat/f3.jpg" 
-                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                    class="bi bi-zoom-in"></i></a>
+                <a href="./assets/img/fiat/f3.jpg" data-gallery="portfolio-gallery-branding"
+                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 <a href="https://www.instagram.com/tiranacampersalbania/" title="More Details" class="details-link"><i
                     class="bi bi-link-45deg"></i></a>
               </div>
@@ -833,8 +878,8 @@
               <img src="./assets/img/fiat/f4.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Tirana Campers Albania</h4>
-                <a href="./assets/img/fiat/f4.jpg" 
-                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="./assets/img/fiat/f4.jpg" data-gallery="portfolio-gallery-app"
+                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 <a href="https://www.instagram.com/tiranacampersalbania/" title="More Details" class="details-link"><i
                     class="bi bi-link-45deg"></i></a>
               </div>
@@ -844,9 +889,8 @@
               <img src="./assets/img/fiat/f5.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Tirana Campers Albania</h4>
-                <a href="./assets/img/fiat/f5.jpg" 
-                  data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                    class="bi bi-zoom-in"></i></a>
+                <a href="./assets/img/fiat/f5.jpg" data-gallery="portfolio-gallery-product"
+                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 <a href="https://www.instagram.com/tiranacampersalbania/" title="More Details" class="details-link"><i
                     class="bi bi-link-45deg"></i></a>
               </div>
@@ -856,9 +900,8 @@
               <img src="./assets/img/fiat/f6.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Tirana Campers Albania</h4>
-                <a href="./assets/img/fiat/f6.jpg" 
-                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                    class="bi bi-zoom-in"></i></a>
+                <a href="./assets/img/fiat/f6.jpg" data-gallery="portfolio-gallery-branding"
+                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 <a href="https://www.instagram.com/tiranacampersalbania/" title="More Details" class="details-link"><i
                     class="bi bi-link-45deg"></i></a>
               </div>
@@ -907,7 +950,7 @@
           <div class="text-center mt-4">
             <a href="blog.html" class="btn btn-warning">View More</a>
           </div>
-          
+
         </div>
 
       </div>
@@ -919,7 +962,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Rent </h2>
-         <p><br>
+        <p><br>
           Your camper rental awaits!</p>
       </div><!-- End Section Title -->
 
@@ -968,7 +1011,7 @@
               align-items: center;
               padding: 0;
               list-style-type: none;">
-                <li ><i class="bi bi-check"></i> <span>2500cc</span></li>
+                <li><i class="bi bi-check"></i> <span>2500cc</span></li>
                 <li><i class="bi bi-check"></i> <span>2 People</span></li>
                 <li><i class="bi bi-check"></i> <span>Manual</span></li>
               </ul>
@@ -992,7 +1035,7 @@
               padding: 0;
               list-style-type: none;">
                 <li><i class="bi bi-check"></i> <span>1900cc
-                </span></li>
+                  </span></li>
                 <li><i class="bi bi-check"></i> <span>
                     2 people</span></li>
                 <li><i class="bi bi-check"></i> <span> Manual</span></li>
@@ -1032,9 +1075,9 @@
             <div class="faq-container">
               <div class="faq-item faq-active">
                 <h3><span class="material-symbols-outlined">
-                  my_location
-                  </span><span class="num">1.</span> <span> 
-                  Safety and Maintenance</span></h3>
+                    my_location
+                  </span><span class="num">1.</span> <span>
+                    Safety and Maintenance</span></h3>
                 <div class="faq-content">
                   <p>Your safety is our priority. Each camper undergoes rigorous maintenance checks and inspections
                     before every rental,
@@ -1044,10 +1087,11 @@
               </div><!-- End Faq item-->
 
               <div class="faq-item">
-                <h3> 
-                  
-                  
-                  <span class="num">2.</span> <span>Adventure - Ready Extras</span></h3>
+                <h3>
+
+
+                  <span class="num">2.</span> <span>Adventure - Ready Extras</span>
+                </h3>
                 <div class="faq-content">
                   <p>Enhance your camping experience with optional extras such as camping gear, outdoor equipment, etc,
                     tailored to make your journey more comfortable and enjoyable.</p>
@@ -1194,20 +1238,23 @@
           <div class="col-xl-10">
             <div class="text-center">
               <h2>
-                <a href="mailto:tiranacampersalbania@gmail.com" style="text-decoration: none; color: white; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
+                <a href="mailto:tiranacampersalbania@gmail.com"
+                  style="text-decoration: none; color: white; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
                   <ion-icon name="mail-outline" style="font-size: 1.5rem; margin-right: 8px;"></ion-icon>
                   <span>tiranacampersalbania@gmail.com</span>
                 </a>
-            </h2>
-             
+              </h2>
+
               <h2>
-                <a href="tel:+355684111124" style="text-decoration: none; color: white; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; gap: 8px;">
+                <a href="tel:+355684111124"
+                  style="text-decoration: none; color: white; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; gap: 8px;">
                   <ion-icon name="call-outline" style="font-size: 1.5rem;"></ion-icon>
                   <span>+355 684 111 124</span>
-              </a>
-              
+                </a>
+
               </h2>
-              <a href="tel:+355684111124" style="display: inline-block; background-color: #28a745; color: white; font-size: 1.2rem; font-weight: bold; padding: 12px 24px; border-radius: 30px; text-decoration: none; margin-top: 20px;">
+              <a href="tel:+355684111124"
+                style="display: inline-block; background-color: #28a745; color: white; font-size: 1.2rem; font-weight: bold; padding: 12px 24px; border-radius: 30px; text-decoration: none; margin-top: 20px;">
                 📞 Call Now
               </a>
             </div>
@@ -1216,7 +1263,7 @@
       </div>
 
     </section>
-    
+
     <!-- /Call To Action Section -->
 
     <!-- Testimonials Section -->
@@ -1229,7 +1276,8 @@
           <div class="col-lg-5 info" data-aos="fade-up" data-aos-delay="100">
             <h3>Quotes</h3>
             <p>
-         "Camper lovers and adventurers don't seek destinations; they seek experiences, new paths, and stories to share at every turn."
+              "Camper lovers and adventurers don't seek destinations; they seek experiences, new paths, and stories to
+              share at every turn."
             </p>
           </div>
 
@@ -1255,8 +1303,8 @@
 
                 <div class="swiper-slide">
                   <div class="testimonial-item">
-                   <div class="d-flex">
-                    <!--    <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img flex-shrink-0"
+                    <div class="d-flex">
+                      <!--    <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img flex-shrink-0"
                         alt="">-->
                       <div>
                         <h3>Saul Goodman</h3>
@@ -1267,9 +1315,10 @@
                         </div>
                       </div>
                     </div>
-                    <p> 
+                    <p>
                       <i class="bi bi-quote quote-icon-left"></i>
-                      <span>"Life is better when you’re rolling on four wheels and the open road is your destination."</span>
+                      <span>"Life is better when you’re rolling on four wheels and the open road is your
+                        destination."</span>
                       <i class="bi bi-quote quote-icon-right"></i>
                     </p>
                   </div>
@@ -1282,7 +1331,7 @@
                         alt=""> -->
                       <div>
                         <h3>Sara Wilsson</h3>
-                       
+
                         <div class="stars">
                           <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                             class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
@@ -1322,10 +1371,10 @@
                 <div class="swiper-slide">
                   <div class="testimonial-item">
                     <div class="d-flex">
-                  
+
                       <div>
                         <h3>Matt Brandon</h3>
-                   
+
                         <div class="stars">
                           <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                             class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
@@ -1343,10 +1392,10 @@
                 <div class="swiper-slide">
                   <div class="testimonial-item">
                     <div class="d-flex">
-                    
+
                       <div>
                         <h3>John Larson</h3>
-                   
+
                         <div class="stars">
                           <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                             class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
@@ -1396,7 +1445,8 @@
               <p class="post-category">Adventure</p>
 
               <h2 class="title">
-                <a href="https://www.instagram.com/tiranacampersalbania/">Discover the beauty of Albania with the Volkswagen Transporter (Shkodra) and 
+                <a href="https://www.instagram.com/tiranacampersalbania/">Discover the beauty of Albania with the
+                  Volkswagen Transporter (Shkodra) and
                   Renault Trafic (Saranda) campers, designed for unforgettable journeys. 💚</a>
               </h2>
 
@@ -1423,9 +1473,10 @@
               <p class="post-category">Adventure</p>
 
               <h2 class="title">
-                <a href="https://www.instagram.com/tiranacampersalbania/">We’ve thought of everything so you can focus on the journey. 🌿🚐</a>
+                <a href="https://www.instagram.com/tiranacampersalbania/">We’ve thought of everything so you can focus
+                  on the journey. 🌿🚐</a>
               </h2>
-<!-- 
+              <!-- 
               <div class="d-flex align-items-center">
                 <img src="assets/img/recent/new2.png" alt="" class="img-fluid post-author-img flex-shrink-0">
                 <div class="post-meta">
@@ -1449,7 +1500,8 @@
               <p class="post-category">Entertainment</p>
 
               <h2 class="title">
-                <a href="https://www.instagram.com/tiranacampersalbania/">There’s nothing better than relaxing under the sun tent after a day of exploring Albania’s wild side. 🌲✨</a>
+                <a href="https://www.instagram.com/tiranacampersalbania/">There’s nothing better than relaxing under the
+                  sun tent after a day of exploring Albania’s wild side. 🌲✨</a>
               </h2>
 
               <!-- <div class="d-flex align-items-center">
@@ -1466,13 +1518,13 @@
           </div><!-- End post list item -->
 
         </div><!-- End recent posts list -->
-       
+
       </div>
       <div class="text-center mt-4">
         <a href="blog.html#blog-posts" class="btn btn-warning">View More</a>
       </div>
-      
-    
+
+
     </section><!-- /Recent Posts Section -->
 
     <!-- Contact Section -->
@@ -1484,7 +1536,7 @@
         <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
       </div>
 
-      
+
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="row gy-4">
@@ -1496,46 +1548,46 @@
                 <div class="info-item" data-aos="fade" data-aos-delay="200">
                   <i class="bi bi-geo-alt"></i>
                   <h3>Address</h3>
-                <p>Bulevardi Gjergj Fishta,</p>
+                  <p>Bulevardi Gjergj Fishta,</p>
                   <p>Pallati E 88, Shkalla 1, Ap 9
                     Ish Ekspozita Shqiperia Sot</p>
                   <p>Tirana Albania</p>
-                  
+
                 </div>
               </div><!-- End Info Item -->
 
-              <div class="col-md-6 justify-content-center text-center" >
+              <div class="col-md-6 justify-content-center text-center">
                 <div class="info-item" data-aos="fade" data-aos-delay="300">
                   <i class="bi bi-telephone"></i>
-                  <h3 >Call Us</h3>
+                  <h3>Call Us</h3>
 
                   <a href="tel:+355684111124" class="topbar-item link">
                     <div class="icon">
-                        <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+                      <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
                     </div>
                     <span class="span">+355 684 111 124</span>
-                </a>
-                
+                  </a>
+
                 </div>
               </div><!-- End Info Item -->
 
               <div class="col-md-6 justify-content-center text-center">
                 <div class="info-item" data-aos="fade" data-aos-delay="400">
-                    <i class="bi bi-envelope"></i>
-                    <h3>Email Us</h3>
-            
-                    <a href="mailto:tiranacampersalbania@gmail.com" class="topbar-item link">
-                        <div class="icon">
-                            <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
-                        </div>
-            
-                        <div class="email-box">
-                         <p>  <span class="span"  >tiranacampersalbania@gmail.com</span></p> 
-                        </div>
-                    </a>
+                  <i class="bi bi-envelope"></i>
+                  <h3>Email Us</h3>
+
+                  <a href="mailto:tiranacampersalbania@gmail.com" class="topbar-item link">
+                    <div class="icon">
+                      <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+                    </div>
+
+                    <div class="email-box">
+                      <p> <span class="span">tiranacampersalbania@gmail.com</span></p>
+                    </div>
+                  </a>
                 </div>
-            </div><!-- End Info Item -->
-            
+              </div><!-- End Info Item -->
+
 
               <div class="col-md-6 justify-content-center text-center">
                 <div class="info-item" data-aos="fade" data-aos-delay="500">
@@ -1550,7 +1602,7 @@
 
           </div>
 
-          
+
 
         </div>
 
@@ -1560,7 +1612,8 @@
 
   </main>
 
-  <footer id="footer" class="footer position-relative" style="background: linear-gradient(to bottom, #ffffff, #E3F2FD);">    
+  <footer id="footer" class="footer position-relative"
+    style="background: linear-gradient(to bottom, #ffffff, #E3F2FD);">
     <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-about">
@@ -1568,45 +1621,38 @@
             <span class="sitename">Tirana Campers Albania</span>
           </a>
           <p style="font-size: 20px; font-weight: bolder; color: orange;">
-            Start your adventure today. <br> 
+            Start your adventure today. <br>
             Your camper rental awaits!
           </p>
           <div class="social-links d-flex mt-4">
             <!-- Instagram Icon -->
             <a href="https://www.instagram.com/tiranacampersalbania/" target="_blank" class="me-3">
-                <i class="bi bi-instagram"></i>
+              <i class="bi bi-instagram"></i>
             </a>
-            
+
             <!-- WhatsApp Icon -->
-            <a href="https://wa.me/355684111124?text=Pershendetje,%20dua%20te%20marr%20me%20qira%20nje%20kamper!" target="_blank">
-                <i class="bi bi-whatsapp"></i>
+            <a href="https://wa.me/355684111124?text=Pershendetje,%20dua%20te%20marr%20me%20qira%20nje%20kamper!"
+              target="_blank">
+              <i class="bi bi-whatsapp"></i>
             </a>
-        </div>
+          </div>
         </div>
 
         <!-- Harta e Tiranës -->
         <div class="col-lg-4 col-6 footer-map d-none d-lg-block">
           <div class="map-container">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.3986949629625!2d19.802656675875156!3d41.32194297130824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135031aa88eea727%3A0x2782f605f415d544!2sBulevardi%20Gjergj%20Fishta%2C%20Tiran%C3%AB%2C%20Albania!5e0!3m2!1sen!2s!4v1741129706962!5m2!1sen!2s"  
-              width="100%" 
-              height="250" 
-              style="border:0;" 
-              allowfullscreen="" 
-              loading="lazy">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.3986949629625!2d19.802656675875156!3d41.32194297130824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135031aa88eea727%3A0x2782f605f415d544!2sBulevardi%20Gjergj%20Fishta%2C%20Tiran%C3%AB%2C%20Albania!5e0!3m2!1sen!2s!4v1741129706962!5m2!1sen!2s"
+              width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
             </iframe>
           </div>
         </div>
 
         <div class="col-lg-6 col-12 footer-map d-lg-none">
           <div class="map-container">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.3986949629625!2d19.802656675875156!3d41.32194297130824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135031aa88eea727%3A0x2782f605f415d544!2sBulevardi%20Gjergj%20Fishta%2C%20Tiran%C3%AB%2C%20Albania!5e0!3m2!1sen!2s!4v1741129706962!5m2!1sen!2s"  
-              width="100%" 
-              height="250" 
-              style="border:0;" 
-              allowfullscreen="" 
-              loading="lazy">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.3986949629625!2d19.802656675875156!3d41.32194297130824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135031aa88eea727%3A0x2782f605f415d544!2sBulevardi%20Gjergj%20Fishta%2C%20Tiran%C3%AB%2C%20Albania!5e0!3m2!1sen!2s!4v1741129706962!5m2!1sen!2s"
+              width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
             </iframe>
           </div>
         </div>
@@ -1619,15 +1665,15 @@
 
           <p class="mt-4"><strong>Phone:</strong>
             <a href="tel:+355684111124" class="topbar-item link">
-                <div class="icon">
-                    <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
-                </div>
-                <span class="span">+355 684 111 124</span>
+              <div class="icon">
+                <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+              </div>
+              <span class="span">+355 684 111 124</span>
             </a>
-        </p>
-        
+          </p>
 
-          <p><strong>Email:</strong> 
+
+          <p><strong>Email:</strong>
             <a href="mailto:tiranacampersalbania@gmail.com" class="topbar-item link">
               <div class="icon">
                 <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
@@ -1637,7 +1683,7 @@
               </div>
             </a>
           </p>
-          <p><strong>Instagram</strong> 
+          <p><strong>Instagram</strong>
             <a href="https://www.instagram.com/tiranacampersalbania/" class="topbar-item link">
               <div class="icon">
                 <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
@@ -1656,7 +1702,7 @@
         © Copyright Petrino Qasolli
       </div>
     </div>
-</footer>
+  </footer>
 
 
   <!-- Scroll Top -->
@@ -1671,93 +1717,98 @@
     .slide-in {
       animation: slideIn 1s ease-in-out forwards;
     }
-  
+
     /* Krijimi i animacionit të 'slide' */
     @keyframes slideIn {
       from {
         transform: translateX(100%);
         opacity: 0;
       }
+
       to {
         transform: translateX(0);
         opacity: 1;
       }
     }
-  
+
     .hidden {
       display: none;
     }
-  
+
     /* Fsheh div-in në fillim */
     .hero-image {
       display: none;
     }
   </style>
-  
+
   <div class="col-lg-6 hero-image" id="image-1" data-aos="fade-left" data-aos-delay="600" style="text-align: center;">
     <img id="car-image-1" src="./volkswagen.png" alt="Kamper Tirana Volkswagen" class="img-fluid animated-image">
-    
+
     <div class="icon-details">
-        <div class="icon-item">
-            <img src="/icons8-turbo-50.png" width="40px" alt=""> <span id="engine-1" style="color: black;">2500cc</span>
-        </div>
-        <div class="icon-item">
-            <img src="/icons8-gas-station-24.png" width="40px" alt=""> <span id="fuel-consumption-1" style="color: black;">8-9/100km</span>
-        </div>
-        <div class="icon-item">
-            <img src="/icons8-clutch-pedal-48.png" width="40px" alt=""> <span id="transmission-1" style="color: black;">Manual</span>
-        </div>
-        <div class="icon-item">
-            <img src="/icons8-speed-meter-50.png" width="40px" alt=""> <span id="status-1" style="color: black;">ON</span>
-        </div>
+      <div class="icon-item">
+        <img src="/icons8-turbo-50.png" width="40px" alt=""> <span id="engine-1" style="color: black;">2500cc</span>
+      </div>
+      <div class="icon-item">
+        <img src="/icons8-gas-station-24.png" width="40px" alt=""> <span id="fuel-consumption-1"
+          style="color: black;">8-9/100km</span>
+      </div>
+      <div class="icon-item">
+        <img src="/icons8-clutch-pedal-48.png" width="40px" alt=""> <span id="transmission-1"
+          style="color: black;">Manual</span>
+      </div>
+      <div class="icon-item">
+        <img src="/icons8-speed-meter-50.png" width="40px" alt=""> <span id="status-1" style="color: black;">ON</span>
+      </div>
     </div>
   </div>
-  
+
   <div class="col-lg-6 hero-image" id="image-2" data-aos="fade-left" data-aos-delay="600" style="text-align: center;">
     <img id="car-image-2" src="./ducat.png" alt="Kamper Tirana Audi" class="img-fluid animated-image">
-    
+
     <div class="icon-details">
-        <div class="icon-item">
-            <img src="/icons8-turbo-50.png" width="40px" alt=""> <span id="engine-2" style="color: black;">1900cc</span>
-        </div>
-        <div class="icon-item">
-            <img src="/icons8-gas-station-24.png" width="40px" alt=""> <span id="fuel-consumption-2" style="color: black;">8-9/100km</span>
-        </div>
-        <div class="icon-item">
-            <img src="/icons8-clutch-pedal-48.png" width="40px" alt=""> <span id="transmission-2" style="color: black;">Manual</span>
-        </div>
-        <div class="icon-item">
-            <img src="/icons8-speed-meter-50.png" width="40px" alt=""> <span id="status-2" style="color: black;">ON</span>
-        </div>
+      <div class="icon-item">
+        <img src="/icons8-turbo-50.png" width="40px" alt=""> <span id="engine-2" style="color: black;">1900cc</span>
+      </div>
+      <div class="icon-item">
+        <img src="/icons8-gas-station-24.png" width="40px" alt=""> <span id="fuel-consumption-2"
+          style="color: black;">8-9/100km</span>
+      </div>
+      <div class="icon-item">
+        <img src="/icons8-clutch-pedal-48.png" width="40px" alt=""> <span id="transmission-2"
+          style="color: black;">Manual</span>
+      </div>
+      <div class="icon-item">
+        <img src="/icons8-speed-meter-50.png" width="40px" alt=""> <span id="status-2" style="color: black;">ON</span>
+      </div>
     </div>
   </div>
-  
+
   <script>
-      let currentImage = 1; // Përcakton që të fillojë nga div-i 1
-  
-      function switchImages() {
-          if (currentImage === 1) {
-              document.getElementById("image-1").style.display = "none";  // Fsheh div-in e parë
-              document.getElementById("image-2").style.display = "block"; // Shfaq div-in e dytë
-              document.getElementById("image-2").classList.add('slide-in'); // Shtoni animacionin për shfaqje
-              currentImage = 2; // Ndërron në div-in e dytë
-          } else {
-              document.getElementById("image-2").style.display = "none";  // Fsheh div-in e dytë
-              document.getElementById("image-1").style.display = "block"; // Shfaq div-in e parë
-              document.getElementById("image-1").classList.add('slide-in'); // Shtoni animacionin për shfaqje
-              currentImage = 1; // Ndërron në div-in e parë
-          }
+    let currentImage = 1; // Përcakton që të fillojë nga div-i 1
+
+    function switchImages() {
+      if (currentImage === 1) {
+        document.getElementById("image-1").style.display = "none";  // Fsheh div-in e parë
+        document.getElementById("image-2").style.display = "block"; // Shfaq div-in e dytë
+        document.getElementById("image-2").classList.add('slide-in'); // Shtoni animacionin për shfaqje
+        currentImage = 2; // Ndërron në div-in e dytë
+      } else {
+        document.getElementById("image-2").style.display = "none";  // Fsheh div-in e dytë
+        document.getElementById("image-1").style.display = "block"; // Shfaq div-in e parë
+        document.getElementById("image-1").classList.add('slide-in'); // Shtoni animacionin për shfaqje
+        currentImage = 1; // Ndërron në div-in e parë
       }
-  
-      // Cakto intervalin për të ndërruar div-in çdo 5 sekonda
-      window.onload = function() {
-        document.getElementById("image-1").style.display = "block"; // Shfaq div-in e parë menjëherë
-        setInterval(switchImages, 5000); // Kaloni mes div-ëve çdo 5 sekonda
     }
 
-    
+    // Cakto intervalin për të ndërruar div-in çdo 5 sekonda
+    window.onload = function () {
+      document.getElementById("image-1").style.display = "block"; // Shfaq div-in e parë menjëherë
+      setInterval(switchImages, 5000); // Kaloni mes div-ëve çdo 5 sekonda
+    }
+
+
   </script>
-  
+
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
