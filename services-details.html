@@ -15,7 +15,9 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -27,72 +29,78 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-<style>
-.map-container {
-    position: relative;
-    width: 100%;
-    padding-top: 56.25%; /* Për raportin 16:9 */
-}
-
-.map-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
-
-/* Për pajisjet më të vogla (mobile) */
-@media (max-width: 768px) {
+  <style>
     .map-container {
-        padding-top: 75%; /* Për një lartësi më të përshtatshme */
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+      /* Për raportin 16:9 */
     }
-}
-.whatsapp-float {
-    position: fixed;
-    bottom: 10px;
-    right: 70px;
-    background-color: #25d366;
-    color: white;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    text-decoration: none;
-    z-index: 9999; /* Siguron që të jetë mbi elementët e tjerë */
-    pointer-events: auto; /* Siguron që të jetë gjithmonë klikueshëm */
-}
-@media screen and (max-width: 480px) {
+
+    .map-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* Për pajisjet më të vogla (mobile) */
+    @media (max-width: 768px) {
+      .map-container {
+        padding-top: 75%;
+        /* Për një lartësi më të përshtatshme */
+      }
+    }
+
     .whatsapp-float {
+      position: fixed;
+      bottom: 10px;
+      right: 70px;
+      background-color: #25d366;
+      color: white;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      text-decoration: none;
+      z-index: 9999;
+      /* Siguron që të jetë mbi elementët e tjerë */
+      pointer-events: auto;
+      /* Siguron që të jetë gjithmonë klikueshëm */
+    }
+
+    @media screen and (max-width: 480px) {
+      .whatsapp-float {
         right: 60px;
         bottom: 14px;
         width: 45px;
         height: 45px;
         font-size: 26px;
-    }}
-
-</style>
+      }
+    }
+  </style>
 </head>
 
 <body class="services-details-page">
 
   <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid position-relative d-flex align-items-center justify-content-between" >
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="./Tirana-campers-albania-logo-250.png" alt="" >
+        <img src="./Tirana-campers-albania-logo-250.png" alt="">
         <h1 class="sitename"> Tirana Campers Albania </h1>
       </a>
 
-      <nav id="navmenu" class="navmenu" >
-        <ul >
+      <nav id="navmenu" class="navmenu">
+        <ul>
           <li><a href="index.html#hero" class="active">Home</a></li>
           <li><a href="index.html#services">About us</a></li>
           <li><a href="index.html#about">Services</a></li>
@@ -100,7 +108,7 @@
           <li><a href="index.html#pricing">Pricing</a></li>
           <!-- <li><a href="starter-page.html">Team</a></li> -->
 
-      
+
           <li><a href="index.html#contact">Contact</a></li>
           <a class="btn-getstarted" href="Booking.html">Book Now</a>
         </ul>
@@ -125,13 +133,15 @@
           </div>
         </div>
       </div>
-      
+
     </div><!-- End Page Title -->
-    <a href="https://wa.me/355684111124?text=Pershendetje,%20dua%20te%20marr%20me%20qira%20nje%20kamper!" class="whatsapp-float" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 50px; height: 50px;">
+    <a href="https://wa.me/355684111124?text=Pershendetje,%20dua%20te%20marr%20me%20qira%20nje%20kamper!"
+      class="whatsapp-float" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"
+        style="width: 50px; height: 50px;">
     </a>
-    
-    
+
+
 
     <!-- Service Details Section -->
     <section id="service-details" class="service-details section">
@@ -145,68 +155,88 @@
             <div class="service-box">
               <h4>What Sets Us Apart:</h4>
               <div class="services-list">
-                <a href="" class="active"><span>Quality and Safety:We maintain a fleet of well-maintained campers, ensuring each vehicle meets high standards of
-                  safety and reliability.</span></a>
-                <a href="#"><span><strong>We</strong> believe in transparent pricing and clear rental terms, ensuring our customers can plan and
-                  budget confidently.</p></span></a>
-                <a href="#"><p><strong>We</strong> promote sustainable travel practices and minimize our environmental footprint wherever possible.
-                </p></a>
-                <a href="#"><p><strong>Our</strong> dedicated team is committed to providing personalized service, from helping you choose the
-                  right camper to offering support throughout your journey.</p></a>
+                <a href="" class="active"><span>Quality and Safety:We maintain a fleet of well-maintained campers,
+                    ensuring each vehicle meets high standards of
+                    safety and reliability.</span></a>
+                <a href="#"><span><strong>We</strong> believe in transparent pricing and clear rental terms, ensuring
+                    our customers can plan and
+                    budget confidently.</p></span></a>
+                <a href="#">
+                  <p><strong>We</strong> promote sustainable travel practices and minimize our environmental footprint
+                    wherever possible.
+                  </p>
+                </a>
+                <a href="#">
+                  <p><strong>Our</strong> dedicated team is committed to providing personalized service, from helping
+                    you choose the
+                    right camper to offering support throughout your journey.</p>
+                </a>
               </div>
             </div><!-- End Services List -->
 
-   
+
 
             <div class="help-box d-flex flex-column justify-content-center align-items-center">
               <i class="bi bi-headset help-icon"></i>
               <h4>Have a Question?</h4>
-              <p class="d-flex align-items-center mt-2 mb-0"><i class="bi bi-telephone me-2"></i>   
-                 Call Now
+              <p class="d-flex align-items-center mt-2 mb-0"><i class="bi bi-telephone me-2"></i>
+                Call Now
 
-                 <a href="tel:+355684111124" class="topbar-item link">
-                  
-                 
-            
-              
-              </a></p>
-              <p class="d-flex align-items-center mt-1 mb-0"><i class="bi bi-envelope me-2"></i> <a href="mailto:tiranacampersalbania@gmail.com">tiranacampersalbania@gmail.com</a></p>
+                <a href="tel:+355684111124" class="topbar-item link">
+
+
+
+
+                </a>
+              </p>
+              <p class="d-flex align-items-center mt-1 mb-0"><i class="bi bi-envelope me-2"></i> <a
+                  href="mailto:tiranacampersalbania@gmail.com">tiranacampersalbania@gmail.com</a></p>
             </div>
 
           </div>
 
           <div class="col-lg-8 ps-lg-5" data-aos="fade-up" data-aos-delay="200">
             <img src="assets/img/recent/new1.png" alt="" class="img-fluid services-img">
-            <h3>Founded with a passion for adventure and a love for the great outdoors, Tirana Campers Albania is your go-to destination for premium camper rentals.</h3>
-            
+            <h3>Founded with a passion for adventure and a love for the great outdoors, Tirana Campers Albania is your
+              go-to destination for premium camper rentals.</h3>
 
-We believe in empowering travelers to explore the world on their own terms, with the freedom and flexibility that only a camper can provide.
 
-Our Mission: At Tirana Campers Albania, our mission is to make outdoor exploration accessible and enjoyable for everyone. We strive to offer top-quality campers, exceptional customer service, and memorable travel experiences that inspire a lifelong love for adventure.
+            We believe in empowering travelers to explore the world on their own terms, with the freedom and flexibility
+            that only a camper can provide.
 
-Get in Touch: Whether you're planning a weekend getaway or a cross-country road trip, Tirana Campers Albania is here to help you embark on your next journey. Visit us at www.TiranaCampersAlbania.com to learn more about our services, explore our camper options, and start planning your unforgettable adventure today.
+            Our Mission: At Tirana Campers Albania, our mission is to make outdoor exploration accessible and enjoyable
+            for everyone. We strive to offer top-quality campers, exceptional customer service, and memorable travel
+            experiences that inspire a lifelong love for adventure.
+
+            Get in Touch: Whether you're planning a weekend getaway or a cross-country road trip, Tirana Campers Albania
+            is here to help you embark on your next journey. Visit us at www.TiranaCampersAlbania.com to learn more
+            about our services, explore our camper options, and start planning your unforgettable adventure today.
             <ul>
-             
-             <h3>4 Reasons why you should rent from us</h3>
+
+              <h3>4 Reasons why you should rent from us</h3>
               <li><i class="bi bi-check-circle"></i> <span>Safety and Maintenance
-                Your safety is our priority. Each camper undergoes rigorous maintenance checks and inspections before every rental, providing you with peace of mind during your travels..</span></li>
-            
-             
-                <li><i class="bi bi-check-circle"></i> <span>Adventure - Ready Extras
-                  AEnhance your camping experience with optional extras such as camping gear, outdoor equipment, etc, tailored to make your journey more comfortable and enjoyable.</span></li>
+                  Your safety is our priority. Each camper undergoes rigorous maintenance checks and inspections before
+                  every rental, providing you with peace of mind during your travels..</span></li>
+
+
+              <li><i class="bi bi-check-circle"></i> <span>Adventure - Ready Extras
+                  AEnhance your camping experience with optional extras such as camping gear, outdoor equipment, etc,
+                  tailored to make your journey more comfortable and enjoyable.</span></li>
 
 
               <li><i class="bi bi-check-circle"></i> <span>Knowledge & Suggestions
-                As outdoor enthusiasts ourselves, we provide insider tips, destination recommendations, and local insights to help you make the most of your adventure.</span></li>
-           
-           
-                <li><i class="bi bi-check-circle"></i> <span>Eco - Friendly Practices
-                  We're committed to sustainable tourism practices. Our campers are designed with efficiency in mind, and we promote responsible travel to minimize environmental impact.</span></li>
-             
-           
-           
-              </ul>
-            
+                  As outdoor enthusiasts ourselves, we provide insider tips, destination recommendations, and local
+                  insights to help you make the most of your adventure.</span></li>
+
+
+              <li><i class="bi bi-check-circle"></i> <span>Eco - Friendly Practices
+                  We're committed to sustainable tourism practices. Our campers are designed with efficiency in mind,
+                  and we promote responsible travel to minimize environmental impact.</span></li>
+
+
+
+            </ul>
+
           </div>
 
         </div>
@@ -217,54 +247,48 @@ Get in Touch: Whether you're planning a weekend getaway or a cross-country road 
 
   </main>
 
-  <footer id="footer" class="footer position-relative" style="background: linear-gradient(to bottom, #ffffff, #E3F2FD);">
-        <div class="container footer-top">
+  <footer id="footer" class="footer position-relative"
+    style="background: linear-gradient(to bottom, #ffffff, #E3F2FD);">
+    <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
             <span class="sitename">Tirana Campers Albania</span>
           </a>
           <p style="font-size: 20px; font-weight: bolder; color: orange;">
-            Start your adventure today. <br> 
+            Start your adventure today. <br>
             Your camper rental awaits!
           </p>
           <div class="social-links d-flex mt-4">
             <!-- Instagram Icon -->
             <a href="https://www.instagram.com/tiranacampersalbania/" target="_blank" class="me-3">
-                <i class="bi bi-instagram"></i>
+              <i class="bi bi-instagram"></i>
             </a>
-            
+
             <!-- WhatsApp Icon -->
-            <a href="https://wa.me/355684111124?text=Pershendetje,%20dua%20te%20marr%20me%20qira%20nje%20kamper!" target="_blank">
-                <i class="bi bi-whatsapp"></i>
+            <a href="https://wa.me/355684111124?text=Pershendetje,%20dua%20te%20marr%20me%20qira%20nje%20kamper!"
+              target="_blank">
+              <i class="bi bi-whatsapp"></i>
             </a>
-        </div>
-        
+          </div>
+
         </div>
 
         <!-- Harta e Tiranës -->
         <div class="col-lg-4 col-6 footer-map d-none d-lg-block">
           <div class="map-container">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.3986949629625!2d19.802656675875156!3d41.32194297130824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135031aa88eea727%3A0x2782f605f415d544!2sBulevardi%20Gjergj%20Fishta%2C%20Tiran%C3%AB%2C%20Albania!5e0!3m2!1sen!2s!4v1741129706962!5m2!1sen!2s"  
-              width="100%" 
-              height="250" 
-              style="border:0;" 
-              allowfullscreen="" 
-              loading="lazy">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.3986949629625!2d19.802656675875156!3d41.32194297130824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135031aa88eea727%3A0x2782f605f415d544!2sBulevardi%20Gjergj%20Fishta%2C%20Tiran%C3%AB%2C%20Albania!5e0!3m2!1sen!2s!4v1741129706962!5m2!1sen!2s"
+              width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
             </iframe>
           </div>
         </div>
 
         <div class="col-lg-6 col-12 footer-map d-lg-none">
           <div class="map-container">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.3986949629625!2d19.802656675875156!3d41.32194297130824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135031aa88eea727%3A0x2782f605f415d544!2sBulevardi%20Gjergj%20Fishta%2C%20Tiran%C3%AB%2C%20Albania!5e0!3m2!1sen!2s!4v1741129706962!5m2!1sen!2s"  
-              width="100%" 
-              height="250" 
-              style="border:0;" 
-              allowfullscreen="" 
-              loading="lazy">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.3986949629625!2d19.802656675875156!3d41.32194297130824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135031aa88eea727%3A0x2782f605f415d544!2sBulevardi%20Gjergj%20Fishta%2C%20Tiran%C3%AB%2C%20Albania!5e0!3m2!1sen!2s!4v1741129706962!5m2!1sen!2s"
+              width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
             </iframe>
           </div>
         </div>
@@ -277,15 +301,15 @@ Get in Touch: Whether you're planning a weekend getaway or a cross-country road 
 
           <p class="mt-4"><strong>Phone:</strong>
             <a href="tel:+355684111124" class="topbar-item link">
-                <div class="icon">
-                    <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
-                </div>
-                <span class="span">+355 684 111 124</span>
+              <div class="icon">
+                <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+              </div>
+              <span class="span">+355 684 111 124</span>
             </a>
-        </p>
-        
+          </p>
 
-          <p><strong>Email:</strong> 
+
+          <p><strong>Email:</strong>
             <a href="mailto:tiranacampersalbania@gmail.com" class="topbar-item link">
               <div class="icon">
                 <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
@@ -295,7 +319,7 @@ Get in Touch: Whether you're planning a weekend getaway or a cross-country road 
               </div>
             </a>
           </p>
-          <p><strong>Instagram</strong> 
+          <p><strong>Instagram</strong>
             <a href="https://www.instagram.com/tiranacampersalbania/" class="topbar-item link">
               <div class="icon">
                 <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
@@ -314,10 +338,11 @@ Get in Touch: Whether you're planning a weekend getaway or a cross-country road 
         © Copyright Petrino Qasolli
       </div>
     </div>
-</footer>
+  </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
   <div id="preloader"></div>
